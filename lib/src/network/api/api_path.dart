@@ -83,6 +83,13 @@ class ApiPath {
   // Id Verification Endpoints
   static const String userKycEndpoint = '/merchant/kyc';
   static const String kycHistoryEndpoint = '/merchant/kyc/history';
+  static const String kycRejectedEndpoint = '/merchant/kyc/rejected-data';
+
+  // v57: KYC Level Endpoints
+  static const String kycLevelLevelsEndpoint = '/merchant/kyc-level/levels';
+  static const String kycLevelBadgeEndpoint = '/merchant/kyc-level/badge';
+  static const String kycLevelStatusEndpoint = '/merchant/kyc-level/status';
+  static const String kycLevelSubmitEndpoint = '/merchant/kyc-level/submit';
 
   // Two Fa Authentication Endpoints
   static const String twoFaGenerateQRCodeEndpoint =
