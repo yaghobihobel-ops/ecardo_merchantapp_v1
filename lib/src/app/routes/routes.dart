@@ -79,4 +79,7 @@ class BaseRoute {
   static const String invoiceDetails = "/invoice_details_route";
 
   static const String maintenanceMode = "/maintenance_mode_route";
+
+  // App self-update (in-app updater)
+  static const String appUpdate = "/app_update_route";
 }

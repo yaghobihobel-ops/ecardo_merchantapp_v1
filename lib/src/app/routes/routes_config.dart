@@ -36,6 +36,8 @@ import 'package:qunzo_merchant/src/presentation/screens/withdraw/view/create_wit
 import 'package:qunzo_merchant/src/presentation/screens/withdraw/view/withdraw_screen.dart';
 import 'package:qunzo_merchant/src/presentation/widgets/maintenance_mode.dart';
 import 'package:qunzo_merchant/src/presentation/widgets/no_internet_connection.dart';
+import 'package:qunzo_merchant/src/presentation/screens/app_update/view/app_update_screen.dart';
+
 
 class RoutesConfig {
   static const splash = SplashScreen();
@@ -113,4 +115,7 @@ class RoutesConfig {
   static const updateInvoice = UpdateInvoice();
 
   static const maintenanceMode = MaintenanceMode();
+
+  // App self-update (in-app updater)
+  static const appUpdate = AppUpdateScreen();
 }
