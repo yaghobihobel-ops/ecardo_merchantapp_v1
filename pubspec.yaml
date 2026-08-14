@@ -22,6 +22,7 @@ dependencies:
   flutter_rounded_date_picker: ^3.0.4
   shared_preferences: ^2.5.3
   image_picker: ^1.2.0
+  http_parser: ^4.0.2
   fluttertoast: ^9.0.0
   file_picker: ^10.3.3
   dio: ^5.9.0
