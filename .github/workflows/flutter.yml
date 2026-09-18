@@ -205,6 +205,13 @@ jobs:
       # merchant_app_update_link and pushes the app_update FCM message to the
       # app_updates_merchant topic — installed clients pick the update up
       # automatically (settings-driven popup + in-app updater).
+      #
+      # v1.0.3-fix: POST to https://ecardo.ir (Cloudflare-fronted, working
+      # verified TLS). The origin-api host has NO 443 vhost anymore (fastpanel
+      # regen wiped it) and its origin CA chain fails runner verification —
+      # the first v1.0.3 run silently skipped the deploy through the old
+      # SSL-tolerant branch. The webhook body is a tiny JSON, so CF size
+      # limits don't apply (they only blocked the legacy APK upload).
       # ==========================================================================
       - name: Notify eCardo Server of new release
         if: startsWith(github.ref, 'refs/tags/v')
@@ -220,7 +227,7 @@ jobs:
 
           set -o pipefail
           if curl --fail-with-body --show-error --silent \
-            -X POST https://origin-api.ecardo.ir/api/user/github-deploy-webhook \
+            -X POST https://ecardo.ir/api/user/github-deploy-webhook \
             -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" \
             -H "Accept: application/json" \
             -H "Content-Type: application/json" \
@@ -231,13 +238,6 @@ jobs:
             grep -q "Successfully deployed" notify-result.txt
           else
             code=$?
-            if [ "$code" -eq 60 ] || grep -qi "SSL certificate problem" notify-result.txt; then
-              echo "⚠️ SERVER NOT NOTIFIED: origin-api.ecardo.ir presents a TLS chain"
-              echo "   GitHub runners cannot verify (likely a Cloudflare Origin CA)."
-              echo "   The RELEASE ITSELF IS PUBLISHED and downloadable."
-              echo "   POST the webhook manually — then the in-app updater picks up $VERSION."
-              exit 0
-            fi
             echo "❌ Server notification failed (curl exit $code) — see notify-result.txt"
             exit 1
           fi
