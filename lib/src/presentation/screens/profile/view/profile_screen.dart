@@ -325,7 +325,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                                       true;
                                                   return Switch.adaptive(
                                                     value: enabled,
-                                                    activeColor: AppColors
+                                                    activeTrackColor: AppColors
                                                         .lightPrimary,
                                                     onChanged: controller == null
                                                         ? null

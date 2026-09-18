@@ -36,10 +36,17 @@ class AppUpdateHelper {
   }) async {
     try {
       final settings = Get.find<SettingsService>();
+      // v1.0.3 (MERCHANT-UPD): per-app settings rows — the global
+      // app_version/app_update_link rows belong to the USER app.
       String serverVersion =
-          settings.getSetting('app_version') ?? '';
-      String updateLink = settings.getSetting('app_update_link') ?? '';
-      bool forceUpdate = settings.getSetting('app_force_update') == '1';
+          settings.getSetting(AppUpdateConfig.merchant.settingKeyVersion) ??
+          '';
+      String updateLink =
+          settings.getSetting(AppUpdateConfig.merchant.settingKeyUpdateLink) ??
+          '';
+      bool forceUpdate =
+          settings.getSetting(AppUpdateConfig.merchant.settingKeyForceUpdate) ==
+          '1';
 
       if (serverVersion.isEmpty || updateLink.isEmpty) {
         if (showMessageIfNoUpdate) {
@@ -60,6 +67,7 @@ class AppUpdateHelper {
         await controller.checkForUpdate(
           showSnackbarWhenUpToDate: showMessageIfNoUpdate,
         );
+        if (!context.mounted) return;
         if (controller.phase.value == AppUpdatePhase.updateAvailable) {
           _showMobileUpdateDialog(
             context,
@@ -70,6 +78,8 @@ class AppUpdateHelper {
         }
         return;
       }
+
+      if (!context.mounted) return;
 
       // Fallback: legacy dialog that calls downloadAndInstallApk directly.
       _showMobileUpdateDialog(
@@ -101,8 +111,12 @@ class AppUpdateHelper {
 
     try {
       final settings = Get.find<SettingsService>();
-      final server = settings.getSetting('app_version') ?? '';
-      final link = settings.getSetting('app_update_link') ?? '';
+      final server =
+          settings.getSetting(AppUpdateConfig.merchant.settingKeyVersion) ??
+          '';
+      final link =
+          settings.getSetting(AppUpdateConfig.merchant.settingKeyUpdateLink) ??
+          '';
       if (server.isEmpty || link.isEmpty) return;
 
       final available = await controller.isNewVersionAvailable();
@@ -111,8 +125,11 @@ class AppUpdateHelper {
       final shouldPrompt = await controller.shouldAutoPrompt(server);
       if (!shouldPrompt) return;
 
-      final force =
-          settings.getSetting('app_force_update') == '1';
+      final force = settings.getSetting(
+            AppUpdateConfig.merchant.settingKeyForceUpdate,
+          ) ==
+          '1';
+      if (!context.mounted) return;
       _showMobileUpdateDialog(context, server, link, force);
       await controller.markVersionAsPrompted(server);
     } catch (e) {

@@ -1,14 +1,22 @@
-name: Flutter Android Build
+name: Flutter Android Build & Release
 
 on:
+  pull_request:
+    branches:
+      - main
   push:
     branches:
       - main
+    tags:
+      - 'v*'
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      # Required for `gh release create/upload` to push tags and assets
+      contents: write
 
     steps:
       - name: Checkout source
@@ -19,6 +27,11 @@ jobs:
         with:
           distribution: temurin
           java-version: "17"
+
+      - name: Accept Android SDK licenses
+        shell: bash
+        run: |
+          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses >/dev/null 2>&1 || true
 
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
@@ -32,11 +45,27 @@ jobs:
       - name: Generate localizations
         run: flutter gen-l10n
 
-      - name: Run Analyze
+      # Analyze is a real gate: errors fail the build.
+      - name: Run Analyze (errors are fatal)
         run: |
-          flutter analyze 2>&1 | tee analysis_report.txt || true
+          flutter analyze --no-fatal-infos --no-fatal-warnings 2>&1 | tee analysis_report.txt || true
+          if grep -qE "^ *error •" analysis_report.txt; then
+            echo "❌ Analyzer errors found:"
+            grep -E "^ *error •" analysis_report.txt
+            exit 1
+          fi
+          echo "✅ No analyzer errors"
 
+      - name: Run Tests
+        run: flutter test
+
+      # ==========================================================================
+      # Release keystore setup — TAG BUILDS ONLY (fail-closed)
+      # A tag release without the SIGNING_* secrets is an error, never a
+      # silent fallback to the public debug keystore.
+      # ==========================================================================
       - name: Decode release keystore
+        if: startsWith(github.ref, 'refs/tags/v')
         env:
           SIGNING_KEYSTORE_BASE64: ${{ secrets.SIGNING_KEYSTORE_BASE64 }}
           SIGNING_STORE_PASSWORD: ${{ secrets.SIGNING_STORE_PASSWORD }}
@@ -44,9 +73,10 @@ jobs:
           SIGNING_KEY_PASSWORD: ${{ secrets.SIGNING_KEY_PASSWORD }}
         run: |
           if [ -z "$SIGNING_KEYSTORE_BASE64" ]; then
-            echo "⚠️  SIGNING_KEYSTORE_BASE64 secret is not set — falling back to debug signing."
-            echo "This is fine for testing but release APKs will not be installable over existing installs."
-            exit 0
+            echo "❌ SIGNING_KEYSTORE_BASE64 is not set."
+            echo "   Refusing to build a release without a real signing key."
+            echo "   Set the four SIGNING_* secrets in: Settings → Secrets and variables → Actions"
+            exit 1
           fi
 
           echo "$SIGNING_KEYSTORE_BASE64" | base64 -d > android/ecardo-merchant-release.keystore
@@ -59,39 +89,157 @@ jobs:
           echo "✅ Release keystore configured."
           ls -la android/ecardo-merchant-release.keystore
 
-      - name: Build Release APK
+      # Release (signed) build only for tags; debug build as the compile gate
+      # for PRs and main pushes.
+      - name: Build APK
         run: |
-          flutter build apk --release 2>&1 | tee build_log.txt
-          test -f build/app/outputs/flutter-apk/app-release.apk
+          if [[ "$GITHUB_REF" == refs/tags/v* ]]; then
+            flutter build apk --release 2>&1 | tee build_log.txt
+            test -f build/app/outputs/flutter-apk/app-release.apk
+          else
+            flutter build apk --debug 2>&1 | tee build_log.txt
+            test -f build/app/outputs/flutter-apk/app-debug.apk
+          fi
           echo "APK built successfully!"
 
+      # Post-build signature verification — TAG BUILDS ONLY.
+      # Fails the build if the APK is unsigned.
+      - name: Verify APK signature
+        if: startsWith(github.ref, 'refs/tags/v')
+        shell: python
+        run: |
+          import struct, sys, zipfile, os
+          APK_PATH = "build/app/outputs/flutter-apk/app-release.apk"
+          MAGIC = b"APK Sig Block 42"
+          V2_ID, V3_ID, V31_ID = 0x7109871A, 0xF05368C0, 0x1B93AD61
+
+          if not os.path.exists(APK_PATH):
+              print(f"❌ APK not found at {APK_PATH}")
+              sys.exit(1)
+
+          size = os.path.getsize(APK_PATH)
+          print(f"APK size: {size:,} bytes ({size/1024/1024:.2f} MB)")
+
+          with open(APK_PATH, "rb") as f:
+              data = f.read()
+
+          with zipfile.ZipFile(APK_PATH) as z:
+              v1_files = [n for n in z.namelist()
+                          if n.startswith("META-INF/") and
+                          (n.endswith(".SF") or n.endswith(".RSA") or n.endswith(".DSA")
+                           or n == "META-INF/MANIFEST.MF")]
+          print(f"v1 (JAR) signature files: {len(v1_files)}")
+
+          sig = b"\x50\x4b\x05\x06"
+          eocd_pos = data.rfind(sig, max(0, len(data)-65535-22))
+          if eocd_pos < 0:
+              print("❌ EOCD not found"); sys.exit(1)
+          cd_offset = struct.unpack("<I", data[eocd_pos+16:eocd_pos+20])[0]
+          v2_found = False
+          v3_found = False
+          if cd_offset >= 32:
+              magic = data[cd_offset-16:cd_offset]
+              if magic == MAGIC:
+                  block_size = struct.unpack("<Q", data[cd_offset-24:cd_offset-16])[0]
+                  pos = cd_offset - block_size
+                  pair_count = 0
+                  while pos < cd_offset - 24 and pair_count < 50:
+                      pair_len = struct.unpack("<Q", data[pos:pos+8])[0]
+                      pair_id = struct.unpack("<I", data[pos+8:pos+12])[0]
+                      if pair_id == V2_ID: v2_found = True
+                      if pair_id in (V3_ID, V31_ID): v3_found = True
+                      pos += 8 + pair_len
+                      pair_count += 1
+
+          print("=" * 60)
+          print(f"v1: {bool(v1_files)} | v2: {v2_found} | v3: {v3_found}")
+          if v1_files or v2_found or v3_found:
+              print("✅ APK IS SIGNED — installable on Android.")
+          else:
+              print("🔴 FATAL: APK IS COMPLETELY UNSIGNED!")
+              sys.exit(2)
+
       - name: Upload APK Artifact
+        if: startsWith(github.ref, 'refs/tags/v')
         uses: actions/upload-artifact@v4
         with:
           name: app-release-apk
           path: build/app/outputs/flutter-apk/app-release.apk
 
-      - name: Deploy APK to eCardo Server
-        continue-on-error: true
+      # ==========================================================================
+      # Auto-publish to GitHub Releases — TAG BUILDS ONLY
+      # Publishing happens only when a v* tag is pushed; an existing tag is
+      # never overwritten.
+      # ==========================================================================
+      - name: Publish APK to GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v')
         env:
-          ECARDO_DEPLOY_SECRET: ${{ secrets.ECARDO_DEPLOY_SECRET }}  # S-001: fallback removed
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          VERSION=$(grep -oP "^version:\s*\K[0-9.]+" pubspec.yaml || echo "1.0.0")
-          echo "Deploying version $VERSION"
+          VERSION="${GITHUB_REF_NAME#v}"
+          TAG="v$VERSION"
+          APK_PATH="build/app/outputs/flutter-apk/app-release.apk"
+          STAGED="ecardo_merchant_v${VERSION}.apk"
+          cp "$APK_PATH" "$STAGED"
 
-          curl -k --fail-with-body --show-error --silent \
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo "❌ Release $TAG already exists — refusing to overwrite."
+            echo "   Bump the version and push a new tag."
+            exit 1
+          fi
+
+          gh release create "$TAG" \
+            --title "v${VERSION}" \
+            --notes "Auto-published release from tag ${GITHUB_REF_NAME} (commit ${GITHUB_SHA::7}).
+
+          Source: https://github.com/mahankarimi1382/ecardo_merchantapp_v1/commit/${GITHUB_SHA}" \
+            --target main
+
+          gh release upload "$TAG" "$STAGED" --clobber
+          echo "✅ Release $TAG published with APK"
+          gh release view "$TAG" --json assets,url -q '"URL: \(.url)\nAssets: \(.assets | map(.name) | join(", "))"'
+
+      # ==========================================================================
+      # Notify eCardo Server of the new release — TAG BUILDS ONLY
+      # Link mode: the server stores merchant_app_version +
+      # merchant_app_update_link and pushes the app_update FCM message to the
+      # app_updates_merchant topic — installed clients pick the update up
+      # automatically (settings-driven popup + in-app updater).
+      # ==========================================================================
+      - name: Notify eCardo Server of new release
+        if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          ECARDO_DEPLOY_SECRET: ${{ secrets.ECARDO_DEPLOY_SECRET }}
+        run: |
+          DEPLOY_SECRET="${ECARDO_DEPLOY_SECRET:?ECARDO_DEPLOY_SECRET is not configured}"
+          VERSION="${GITHUB_REF_NAME#v}"
+          DOWNLOAD_URL="https://github.com/${GITHUB_REPOSITORY}/releases/download/v${VERSION}/ecardo_merchant_v${VERSION}.apk"
+
+          echo "Notifying server: version=$VERSION (link mode)"
+          echo "download_url=$DOWNLOAD_URL"
+
+          set -o pipefail
+          if curl --fail-with-body --show-error --silent \
             -X POST https://origin-api.ecardo.ir/api/user/github-deploy-webhook \
-            -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
-            -F "secret=$ECARDO_DEPLOY_SECRET" \
-            -F "app_type=merchant" \
-            -F "version=$VERSION" \
-            -F "apk=@build/app/outputs/flutter-apk/app-release.apk" \
-            2>&1 | tee deploy-result.txt || true
-
-          if grep -q "Successfully deployed" deploy-result.txt; then
-            echo "APK deployed successfully"
+            -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" \
+            -H "Accept: application/json" \
+            -H "Content-Type: application/json" \
+            -H "Origin: https://ecardo.ir" \
+            --compressed \
+            -d "{\"secret\":\"$DEPLOY_SECRET\",\"app_type\":\"merchant\",\"version\":\"$VERSION\",\"download_url\":\"$DOWNLOAD_URL\"}" \
+            | tee notify-result.txt; then
+            grep -q "Successfully deployed" notify-result.txt
           else
-            echo "APK deployment may have failed — check deploy-result.txt"
+            code=$?
+            if [ "$code" -eq 60 ] || grep -qi "SSL certificate problem" notify-result.txt; then
+              echo "⚠️ SERVER NOT NOTIFIED: origin-api.ecardo.ir presents a TLS chain"
+              echo "   GitHub runners cannot verify (likely a Cloudflare Origin CA)."
+              echo "   The RELEASE ITSELF IS PUBLISHED and downloadable."
+              echo "   POST the webhook manually — then the in-app updater picks up $VERSION."
+              exit 0
+            fi
+            echo "❌ Server notification failed (curl exit $code) — see notify-result.txt"
+            exit 1
           fi
 
       - name: Upload Build Log
@@ -103,4 +251,4 @@ jobs:
           path: |
             build_log.txt
             analysis_report.txt
-            deploy-result.txt
+            notify-result.txt

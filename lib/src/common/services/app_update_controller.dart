@@ -19,10 +19,8 @@
 // ============================================================================
 
 import 'dart:async';
-import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:open_filex/open_filex.dart';
@@ -93,23 +91,29 @@ class AppUpdateConfig {
   });
 
   /// Configuration for the eCardo **merchant** app.
+  ///
+  /// v1.0.3 (MERCHANT-UPD): reads the per-app settings rows
+  /// (`merchant_app_*`) written by the deploy webhook. The previous global
+  /// keys (`app_version` / `app_update_link`) belong to the USER app —
+  /// sharing them meant the merchant updater saw user releases.
   static const AppUpdateConfig merchant = AppUpdateConfig(
     autoUpdatePrefsKey: 'auto_update_enabled_merchant',
     lastPromptedVersionPrefsKey: 'last_prompted_version_merchant',
     apkFileName: 'ecardo_merchant_update.apk',
-    settingKeyVersion: 'app_version',
-    settingKeyUpdateLink: 'app_update_link',
-    settingKeyForceUpdate: 'app_force_update',
+    settingKeyVersion: 'merchant_app_version',
+    settingKeyUpdateLink: 'merchant_app_update_link',
+    settingKeyForceUpdate: 'merchant_app_force_update',
   );
 
-  /// Configuration for the eCardo **agent** app.
+  /// Configuration for the eCardo **agent** app (backend parity — the agent
+  /// APK is deployed by the same webhook writing `agent_app_*` rows).
   static const AppUpdateConfig agent = AppUpdateConfig(
     autoUpdatePrefsKey: 'auto_update_enabled_agent',
     lastPromptedVersionPrefsKey: 'last_prompted_version_agent',
     apkFileName: 'ecardo_agent_update.apk',
-    settingKeyVersion: 'app_version',
-    settingKeyUpdateLink: 'app_update_link',
-    settingKeyForceUpdate: 'app_force_update',
+    settingKeyVersion: 'agent_app_version',
+    settingKeyUpdateLink: 'agent_app_update_link',
+    settingKeyForceUpdate: 'agent_app_force_update',
   );
 }
 
@@ -132,7 +136,6 @@ class AppUpdateController extends GetxController {
 
   // ----- Internal -----
   CancelToken? _cancelToken;
-  String? _downloadedApkPath;
 
   @override
   void onInit() {
@@ -260,7 +263,6 @@ class AppUpdateController extends GetxController {
     try {
       final dir = await getApplicationDocumentsDirectory();
       final filePath = '${dir.path}/${config.apkFileName}';
-      _downloadedApkPath = filePath;
 
       _cancelToken = CancelToken();
       final dio = Dio();
