@@ -52,10 +52,22 @@ android {
 
     signingConfigs {
         create("release") {
-            keystoreProperties["storeFile"]?.let { file(it) }?.let { storeFile = it }
+            // v1.0.3-fix: resolve the keystore path relative to the
+            // rootProject (android/) directory, NOT the :app module directory
+            // (android/app/). The CI workflow writes the keystore to
+            // android/ecardo-merchant-release.keystore and key.properties
+            // contains `storeFile=ecardo-merchant-release.keystore` (a
+            // relative path). Using file(it) resolved it to
+            // android/app/... — wrong, and validateSigningRelease failed with
+            // "Keystore file not found". rootProject.file(it) is correct.
+            keystoreProperties["storeFile"]?.let { rootProject.file(it) }?.let { storeFile = it }
             storePassword = keystoreProperties["storePassword"] as String?
             keyAlias = keystoreProperties["keyAlias"] as String?
             keyPassword = keystoreProperties["keyPassword"] as String?
+            // Deterministic signing schemes instead of trusting AGP defaults.
+            enableV1Signing = true
+            enableV2Signing = true
+            enableV3Signing = true
         }
     }
 
