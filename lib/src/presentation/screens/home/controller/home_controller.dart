@@ -174,22 +174,29 @@ class HomeController extends GetxController {
   // Logout Function
   Future<void> submitLogout() async {
     isSignOutLoading.value = true;
+    String? logoutMessage;
     try {
       final response = await Get.find<NetworkService>().post(
         endpoint: ApiPath.logoutEndpoint,
       );
 
       if (response.status == Status.completed) {
-        await Get.find<TokenService>().clearToken();
-        Get.offAllNamed(BaseRoute.login);
-        ToastHelper().showSuccessToast(response.data?["message"]);
+        logoutMessage = response.data?["message"];
       }
     } catch (e, stackTrace) {
       debugPrint('❌ submitLogout() error: $e');
       debugPrint('📍 StackTrace: $stackTrace');
-      ToastHelper().showErrorToast(localization.allControllerGeneralError);
     } finally {
+      // v1.0.3 (SEC): the session is wiped LOCALLY no matter what the
+      // server answered — a failed logout request must never leave the
+      // token or the saved biometric password on disk.
+      await Get.find<TokenService>().clearToken();
+      await SettingsService.wipeSession();
       isSignOutLoading.value = false;
+      Get.offAllNamed(BaseRoute.login);
+      if (logoutMessage != null) {
+        ToastHelper().showSuccessToast(logoutMessage);
+      }
     }
   }
 

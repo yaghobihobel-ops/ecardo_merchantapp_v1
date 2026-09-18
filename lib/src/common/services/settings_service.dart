@@ -45,6 +45,24 @@ class SettingsService extends GetxService {
     return await prefs.setString(currentLanguageLocaleKey, locale);
   }
 
+  /// v1.0.3 (SEC): wipe every session-bound flag from SharedPreferences.
+  ///
+  /// Runs on logout REGARDLESS of whether the server logout call succeeds —
+  /// previously a network failure at logout left the token AND the saved
+  /// biometric password on disk, so the next launch auto-logged-in on a
+  /// session the server may already have invalidated. The saved language
+  /// locale survives (device preference, not session state).
+  static Future<void> wipeSession() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.remove(logInCurrentStateKey);
+    await prefs.remove(currentEmailVerifiedKey);
+    await prefs.remove(currentSetUpPasswordKey);
+    await prefs.remove(currentBiometricKey);
+    await prefs.remove(currentEmailKey);
+    await prefs.remove(currentPasswordKey);
+    await prefs.remove(currentFcmTokenKey);
+  }
+
   // Get Language Locale Current State Function
   static Future<String?> getLanguageLocaleCurrentState() async {
     final prefs = await SharedPreferences.getInstance();
