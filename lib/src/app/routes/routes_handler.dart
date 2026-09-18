@@ -2,6 +2,8 @@ import 'package:get/get.dart';
 import 'package:qunzo_merchant/src/app/bindings/app_bindings.dart';
 import 'package:qunzo_merchant/src/app/routes/routes.dart';
 import 'package:qunzo_merchant/src/app/routes/routes_config.dart';
+import 'package:qunzo_merchant/src/presentation/screens/kyc_level/kyc_level_binding.dart';
+import 'package:qunzo_merchant/src/presentation/screens/kyc_level/view/kyc_submit_wizard.dart';
 
 List<GetPage> routesHandler = [
   GetPage(
@@ -27,7 +29,14 @@ List<GetPage> routesHandler = [
   GetPage(
     name: BaseRoute.navigation,
     page: () => RoutesConfig.navigation,
-    bindings: [HomeBinding(), UserProfileBinding(), WalletsBinding()],
+    bindings: [
+      HomeBinding(),
+      UserProfileBinding(),
+      WalletsBinding(),
+      // v1.0.3 (KYC): roadmap/badge/widget tree need the controller alive
+      // for the whole logged-in session (freed on logout — see binding).
+      KycLevelBinding(),
+    ],
   ),
 
   GetPage(
@@ -105,12 +114,6 @@ List<GetPage> routesHandler = [
   ),
 
   GetPage(
-    name: BaseRoute.idVerification,
-    page: () => RoutesConfig.idVerification,
-    binding: IdVerificationBinding(),
-  ),
-
-  GetPage(
     name: BaseRoute.addNewTicket,
     page: () => RoutesConfig.addNewTicket,
     binding: AddNewTicketBinding(),
@@ -174,6 +177,9 @@ List<GetPage> routesHandler = [
     binding: AuthIdVerificationBinding(),
   ),
 
+  // v1.0.3: this GetPage used to be registered twice (here and at the top
+  // of the list) — the second registration silently overrode the first.
+  // Deduplicated; the single registration below stays.
   GetPage(
     name: BaseRoute.idVerification,
     page: () => RoutesConfig.idVerification,
@@ -236,5 +242,23 @@ List<GetPage> routesHandler = [
   GetPage(
     name: BaseRoute.appUpdate,
     page: () => RoutesConfig.appUpdate,
+  ),
+
+  // KYC Level Routes (v1.0.3)
+  GetPage(
+    name: BaseRoute.kycSubmitWizard,
+    // Read target_level from route arguments — the wizard must show the
+    // target level's documents, never hardcoded level 2.
+    page: () {
+      final args = Get.arguments;
+      final parsed = args is Map
+          ? int.tryParse('${args['target_level'] ?? ''}')
+          : null;
+      return KycSubmitWizard(targetLevel: parsed ?? 2);
+    },
+  ),
+  GetPage(
+    name: BaseRoute.upgradeRequired,
+    page: () => RoutesConfig.upgradeRequired,
   ),
 ];

@@ -17,6 +17,8 @@ import 'package:qunzo_merchant/src/presentation/screens/change_password/view/cha
 import 'package:qunzo_merchant/src/presentation/screens/exchange/view/exchange_screen.dart';
 import 'package:qunzo_merchant/src/presentation/screens/id_verification/view/id_verification_screen.dart';
 import 'package:qunzo_merchant/src/presentation/screens/id_verification/view/kyc_history/kyc_history.dart';
+import 'package:qunzo_merchant/src/presentation/screens/kyc_level/view/kyc_submit_wizard.dart';
+import 'package:qunzo_merchant/src/presentation/screens/kyc_level/view/upgrade_required_screen.dart';
 import 'package:qunzo_merchant/src/presentation/screens/invoice/view/create_invoice/create_invoice.dart';
 import 'package:qunzo_merchant/src/presentation/screens/invoice/view/invoice_details/invoice_details.dart';
 import 'package:qunzo_merchant/src/presentation/screens/invoice/view/invoice_screen.dart';
@@ -118,4 +120,8 @@ class RoutesConfig {
 
   // App self-update (in-app updater)
   static const appUpdate = AppUpdateScreen();
+
+  // KYC Level Routes (v1.0.3)
+  static const kycSubmitWizard = KycSubmitWizard();
+  static const upgradeRequired = UpgradeRequiredScreen();
 }

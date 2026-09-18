@@ -3497,6 +3497,468 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Payment was cancelled!'**
   String get webViewPaymentCancelled;
+
+  /// No description provided for @kycDocumentsRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Documents are required.'**
+  String get kycDocumentsRequired;
+
+  /// No description provided for @kycUploadFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Upload failed. Please try again.'**
+  String get kycUploadFailed;
+
+  /// No description provided for @pickDocumentFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to pick document. Please try again.'**
+  String get pickDocumentFailed;
+
+  /// No description provided for @kycFeatureCashout.
+  ///
+  /// In en, this message translates to:
+  /// **'Cash-out'**
+  String get kycFeatureCashout;
+
+  /// No description provided for @kycFeatureEpay.
+  ///
+  /// In en, this message translates to:
+  /// **'ePay'**
+  String get kycFeatureEpay;
+
+  /// No description provided for @kycFeatureExchange.
+  ///
+  /// In en, this message translates to:
+  /// **'Exchange'**
+  String get kycFeatureExchange;
+
+  /// No description provided for @kycFeatureGiftRedeem.
+  ///
+  /// In en, this message translates to:
+  /// **'Gift redeeming'**
+  String get kycFeatureGiftRedeem;
+
+  /// No description provided for @kycFeatureGiftSend.
+  ///
+  /// In en, this message translates to:
+  /// **'Gift sending'**
+  String get kycFeatureGiftSend;
+
+  /// No description provided for @kycFeatureInvoices.
+  ///
+  /// In en, this message translates to:
+  /// **'Invoice payment'**
+  String get kycFeatureInvoices;
+
+  /// No description provided for @kycFeaturePayBill.
+  ///
+  /// In en, this message translates to:
+  /// **'Bill payment'**
+  String get kycFeaturePayBill;
+
+  /// No description provided for @kycFeaturePayment.
+  ///
+  /// In en, this message translates to:
+  /// **'Merchant payment'**
+  String get kycFeaturePayment;
+
+  /// No description provided for @kycFeaturePaymentLinks.
+  ///
+  /// In en, this message translates to:
+  /// **'Payment links'**
+  String get kycFeaturePaymentLinks;
+
+  /// No description provided for @kycFeatureRemittance.
+  ///
+  /// In en, this message translates to:
+  /// **'Remittance'**
+  String get kycFeatureRemittance;
+
+  /// No description provided for @kycFeatureRequestMoney.
+  ///
+  /// In en, this message translates to:
+  /// **'Money requests'**
+  String get kycFeatureRequestMoney;
+
+  /// No description provided for @kycFeatureTransfer.
+  ///
+  /// In en, this message translates to:
+  /// **'Transfer'**
+  String get kycFeatureTransfer;
+
+  /// No description provided for @kycFeatureTravel.
+  ///
+  /// In en, this message translates to:
+  /// **'Travel booking'**
+  String get kycFeatureTravel;
+
+  /// No description provided for @kycFeatureWithdraw.
+  ///
+  /// In en, this message translates to:
+  /// **'Withdrawal'**
+  String get kycFeatureWithdraw;
+
+  /// No description provided for @kycLimitsSectionTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Transaction limits'**
+  String get kycLimitsSectionTitle;
+
+  /// No description provided for @kycRoadmapContinueForLevel.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue verification — level {level}'**
+  String kycRoadmapContinueForLevel(int level);
+
+  /// No description provided for @kycRoadmapPending.
+  ///
+  /// In en, this message translates to:
+  /// **'Your documents are under review. This usually takes 1–2 business days.'**
+  String get kycRoadmapPending;
+
+  /// No description provided for @kycRoadmapRejectedAction.
+  ///
+  /// In en, this message translates to:
+  /// **'Please resubmit your documents.'**
+  String get kycRoadmapRejectedAction;
+
+  /// No description provided for @kycRoadmapRejectedTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Your verification was rejected.'**
+  String get kycRoadmapRejectedTitle;
+
+  /// No description provided for @kycRoadmapStatusAvailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Ready to upgrade'**
+  String get kycRoadmapStatusAvailable;
+
+  /// No description provided for @kycRoadmapStatusCompleted.
+  ///
+  /// In en, this message translates to:
+  /// **'Completed'**
+  String get kycRoadmapStatusCompleted;
+
+  /// No description provided for @kycRoadmapStatusCurrent.
+  ///
+  /// In en, this message translates to:
+  /// **'Current'**
+  String get kycRoadmapStatusCurrent;
+
+  /// No description provided for @kycRoadmapStatusLocked.
+  ///
+  /// In en, this message translates to:
+  /// **'Locked'**
+  String get kycRoadmapStatusLocked;
+
+  /// No description provided for @kycRoadmapTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Verification roadmap'**
+  String get kycRoadmapTitle;
+
+  /// No description provided for @kycSubmitWizardContinue.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue'**
+  String get kycSubmitWizardContinue;
+
+  /// No description provided for @kycSubmitWizardFileFormat.
+  ///
+  /// In en, this message translates to:
+  /// **'Format: JPG, PNG, PDF — max 5MB'**
+  String get kycSubmitWizardFileFormat;
+
+  /// No description provided for @kycSubmitWizardInvalidLevel.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid level'**
+  String get kycSubmitWizardInvalidLevel;
+
+  /// No description provided for @kycSubmitWizardNotUploaded.
+  ///
+  /// In en, this message translates to:
+  /// **'Not uploaded'**
+  String get kycSubmitWizardNotUploaded;
+
+  /// No description provided for @kycSubmitWizardRequiredDoc.
+  ///
+  /// In en, this message translates to:
+  /// **'Required document'**
+  String get kycSubmitWizardRequiredDoc;
+
+  /// No description provided for @kycSubmitWizardReviewNote.
+  ///
+  /// In en, this message translates to:
+  /// **'After submission your documents are reviewed by an admin. This usually takes 1–2 business days.'**
+  String get kycSubmitWizardReviewNote;
+
+  /// No description provided for @kycSubmitWizardReviewTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Review & submit'**
+  String get kycSubmitWizardReviewTitle;
+
+  /// No description provided for @kycSubmitWizardSubmit.
+  ///
+  /// In en, this message translates to:
+  /// **'Submit documents'**
+  String get kycSubmitWizardSubmit;
+
+  /// No description provided for @kycSubmitWizardTapToUpload.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap to upload'**
+  String get kycSubmitWizardTapToUpload;
+
+  /// No description provided for @kycSubmitWizardTitleForLevel.
+  ///
+  /// In en, this message translates to:
+  /// **'Verification — level {level}'**
+  String kycSubmitWizardTitleForLevel(int level);
+
+  /// No description provided for @kycSubmitWizardUploaded.
+  ///
+  /// In en, this message translates to:
+  /// **'Uploaded: {fileName}'**
+  String kycSubmitWizardUploaded(String fileName);
+
+  /// No description provided for @kycUpgradeBodyForLevel.
+  ///
+  /// In en, this message translates to:
+  /// **'To use this feature, your identity verification must reach level {level}.'**
+  String kycUpgradeBodyForLevel(int level);
+
+  /// No description provided for @kycUpgradeBodyGeneric.
+  ///
+  /// In en, this message translates to:
+  /// **'Your current verification level does not allow this action. Please complete or upgrade your identity verification.'**
+  String get kycUpgradeBodyGeneric;
+
+  /// No description provided for @kycUpgradeCurrentLevel.
+  ///
+  /// In en, this message translates to:
+  /// **'Your level'**
+  String get kycUpgradeCurrentLevel;
+
+  /// No description provided for @kycUpgradeLater.
+  ///
+  /// In en, this message translates to:
+  /// **'I\'ll do it later'**
+  String get kycUpgradeLater;
+
+  /// No description provided for @kycUpgradeLevelChip.
+  ///
+  /// In en, this message translates to:
+  /// **'Level {level}'**
+  String kycUpgradeLevelChip(int level);
+
+  /// No description provided for @kycUpgradeRequiredLevel.
+  ///
+  /// In en, this message translates to:
+  /// **'Required level'**
+  String get kycUpgradeRequiredLevel;
+
+  /// No description provided for @kycUpgradeRequiredTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Verification upgrade required'**
+  String get kycUpgradeRequiredTitle;
+
+  /// No description provided for @kycUpgradeStartVerification.
+  ///
+  /// In en, this message translates to:
+  /// **'Start verification'**
+  String get kycUpgradeStartVerification;
+
+  /// No description provided for @kycDocBusinessInfo.
+  ///
+  /// In en, this message translates to:
+  /// **'Business information'**
+  String get kycDocBusinessInfo;
+
+  /// No description provided for @kycDocBusinessInfoHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Complete business information including name, activity type and address.'**
+  String get kycDocBusinessInfoHint;
+
+  /// No description provided for @kycDocCompanyDocs.
+  ///
+  /// In en, this message translates to:
+  /// **'Company documents'**
+  String get kycDocCompanyDocs;
+
+  /// No description provided for @kycDocCompanyDocsHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Company registration documents, articles of association and incorporation notice.'**
+  String get kycDocCompanyDocsHint;
+
+  /// No description provided for @kycDocGenericHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Please upload the required document.'**
+  String get kycDocGenericHint;
+
+  /// No description provided for @kycDocGovtId.
+  ///
+  /// In en, this message translates to:
+  /// **'ID document'**
+  String get kycDocGovtId;
+
+  /// No description provided for @kycDocGovtIdHint.
+  ///
+  /// In en, this message translates to:
+  /// **'A clear photo of the front and back of your ID document. All details must be readable.'**
+  String get kycDocGovtIdHint;
+
+  /// No description provided for @kycDocNationalCard.
+  ///
+  /// In en, this message translates to:
+  /// **'National ID card'**
+  String get kycDocNationalCard;
+
+  /// No description provided for @kycDocNationalCardHint.
+  ///
+  /// In en, this message translates to:
+  /// **'A clear photo of both sides of your national ID card. All details must be readable.'**
+  String get kycDocNationalCardHint;
+
+  /// No description provided for @kycDocPersonalInfo.
+  ///
+  /// In en, this message translates to:
+  /// **'Personal information'**
+  String get kycDocPersonalInfo;
+
+  /// No description provided for @kycDocPersonalInfoHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Personal information including address, postal code and phone number.'**
+  String get kycDocPersonalInfoHint;
+
+  /// No description provided for @kycDocSelfie.
+  ///
+  /// In en, this message translates to:
+  /// **'Selfie'**
+  String get kycDocSelfie;
+
+  /// No description provided for @kycDocSelfieHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Take a clear selfie with good lighting and a fully visible face.'**
+  String get kycDocSelfieHint;
+
+  /// No description provided for @kycDocSourceOfFunds.
+  ///
+  /// In en, this message translates to:
+  /// **'Proof of source of funds'**
+  String get kycDocSourceOfFunds;
+
+  /// No description provided for @kycDocSourceOfFundsHint.
+  ///
+  /// In en, this message translates to:
+  /// **'A document proving the source of your funds (payslip, bank statement, business income…).'**
+  String get kycDocSourceOfFundsHint;
+
+  /// No description provided for @kycDocTradeLicense.
+  ///
+  /// In en, this message translates to:
+  /// **'Trade license'**
+  String get kycDocTradeLicense;
+
+  /// No description provided for @kycDocTradeLicenseHint.
+  ///
+  /// In en, this message translates to:
+  /// **'A scanned copy of a valid trade license.'**
+  String get kycDocTradeLicenseHint;
+
+  /// No description provided for @kycDocVideoVerification.
+  ///
+  /// In en, this message translates to:
+  /// **'Video verification'**
+  String get kycDocVideoVerification;
+
+  /// No description provided for @kycDocVideoVerificationHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Record a short video of your face following the on-screen instructions.'**
+  String get kycDocVideoVerificationHint;
+
+  /// No description provided for @kycLimitGroupCashin.
+  ///
+  /// In en, this message translates to:
+  /// **'Cash-in'**
+  String get kycLimitGroupCashin;
+
+  /// No description provided for @kycLimitGroupCashout.
+  ///
+  /// In en, this message translates to:
+  /// **'Cash-out'**
+  String get kycLimitGroupCashout;
+
+  /// No description provided for @kycLimitGroupExchange.
+  ///
+  /// In en, this message translates to:
+  /// **'Exchange'**
+  String get kycLimitGroupExchange;
+
+  /// No description provided for @kycLimitGroupGift.
+  ///
+  /// In en, this message translates to:
+  /// **'Gift'**
+  String get kycLimitGroupGift;
+
+  /// No description provided for @kycLimitGroupPayment.
+  ///
+  /// In en, this message translates to:
+  /// **'Payment'**
+  String get kycLimitGroupPayment;
+
+  /// No description provided for @kycLimitGroupTransfer.
+  ///
+  /// In en, this message translates to:
+  /// **'Transfer'**
+  String get kycLimitGroupTransfer;
+
+  /// No description provided for @kycLimitMeasureDaily.
+  ///
+  /// In en, this message translates to:
+  /// **'per day'**
+  String get kycLimitMeasureDaily;
+
+  /// No description provided for @kycLimitMeasureMax.
+  ///
+  /// In en, this message translates to:
+  /// **'max'**
+  String get kycLimitMeasureMax;
+
+  /// No description provided for @kycLimitMeasureMin.
+  ///
+  /// In en, this message translates to:
+  /// **'min'**
+  String get kycLimitMeasureMin;
+
+  /// No description provided for @kycLimitMeasureMonthly.
+  ///
+  /// In en, this message translates to:
+  /// **'per month'**
+  String get kycLimitMeasureMonthly;
+
+  /// No description provided for @kycLimitPaycardoTopup.
+  ///
+  /// In en, this message translates to:
+  /// **'PayCardo top-up'**
+  String get kycLimitPaycardoTopup;
+
+  /// No description provided for @kycCheckUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Verification check is temporarily unavailable. Please try again shortly.'**
+  String get kycCheckUnavailable;
 }
 
 class _AppLocalizationsDelegate

@@ -7,7 +7,9 @@ import 'package:qunzo_merchant/src/common/widgets/app_bar/common_app_bar.dart';
 import 'package:qunzo_merchant/src/common/widgets/app_bar/common_default_app_bar.dart';
 import 'package:qunzo_merchant/src/common/widgets/common_loading.dart';
 import 'package:qunzo_merchant/src/presentation/screens/id_verification/controller/id_verification_controller.dart';
+import 'package:qunzo_merchant/src/presentation/screens/kyc_level/controller/kyc_level_controller.dart';
 import 'package:qunzo_merchant/src/presentation/screens/kyc_level/view/kyc_level_badge.dart';
+import 'package:qunzo_merchant/src/presentation/screens/kyc_level/view/kyc_level_roadmap.dart';
 
 class IdVerificationScreen extends StatefulWidget {
   const IdVerificationScreen({super.key});
@@ -21,6 +23,10 @@ class _IdVerificationScreenState extends State<IdVerificationScreen> {
 
   Future<void> refreshData() async {
     await controller.fetchUser();
+    // v1.0.3 (KYC): pull-to-refresh also re-pulls the level roadmap state.
+    if (Get.isRegistered<KycLevelController>()) {
+      await Get.find<KycLevelController>().fetchStatus();
+    }
   }
 
   @override
@@ -71,58 +77,25 @@ class _IdVerificationScreenState extends State<IdVerificationScreen> {
                             const KycLevelBadge(),
                             const SizedBox(height: 20),
                             _buildVerificationSection(),
+                            // v1.0.3 (KYC): the visual level roadmap —
+                            // replaces the old "nothing to submit" stub.
+                            const SizedBox(height: 20),
+                            KycLevelRoadmap(
+                              onLevelTap: () {
+                                final kycController =
+                                    Get.find<KycLevelController>();
+                                final nextLevel =
+                                    kycController.nextLevel?.level ?? 2;
+                                Get.toNamed(
+                                  BaseRoute.kycSubmitWizard,
+                                  arguments: {'target_level': nextLevel},
+                                );
+                              },
+                            ),
                           ],
                         ),
                       ),
                       const SizedBox(height: 20),
-                      Container(
-                        margin: EdgeInsets.symmetric(horizontal: 18),
-                        padding: const EdgeInsetsDirectional.only(
-                          start: 18,
-                          end: 18,
-                          top: 16,
-                        ),
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          color: AppColors.white,
-                          borderRadius: BorderRadius.circular(16),
-                        ),
-                        child: Column(
-                          children: [
-                            Text(
-                              localization.idVerificationVerificationCenter,
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontWeight: FontWeight.w900,
-                                fontSize: 18,
-                                letterSpacing: 0,
-                                color: AppColors.lightTextPrimary,
-                              ),
-                            ),
-                            const SizedBox(height: 12),
-                            Divider(
-                              color: AppColors.black.withValues(alpha: 0.15),
-                              height: 0,
-                            ),
-                            const SizedBox(height: 24),
-                            SizedBox(
-                              height: MediaQuery.of(context).size.height * 0.5,
-                              child: Center(
-                                child: Text(
-                                  localization.idVerificationNothingToSubmit,
-                                  style: TextStyle(
-                                    letterSpacing: 0,
-                                    fontWeight: FontWeight.w700,
-                                    fontSize: 18,
-                                    color: AppColors.lightTextPrimary,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            const SizedBox(height: 10),
-                          ],
-                        ),
-                      ),
                     ],
                   ),
                 ),

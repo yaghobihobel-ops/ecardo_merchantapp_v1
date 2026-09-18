@@ -1,30 +1,23 @@
 {
   "@@locale": "ar",
-
   "comment_common_maintenance": "==== Maintenance ====",
   "maintenanceTitle": "تحت الصيانة",
   "maintenanceSubtitle": "نقوم حاليًا بإجراء صيانة مجدولة لتحسين تجربتك.",
-
   "comment_all_controller": "==== All Controller Error Message ====",
   "allControllerGeneralError": "حدث خطأ ما!",
-
   "comment_exit_app_message": "==== Exit App Message ====",
   "exitAppTitle": "الخروج من التطبيق",
   "exitAppMessage": "هل أنت متأكد أنك تريد الخروج من التطبيق؟",
-
   "comment_splash_screen": "==== Splash Screen ====",
   "splashMerchant": "تاجر",
-
   "comment_navigation_screen": "==== Navigation Screen ====",
   "navigationHome": "الرئيسية",
   "navigationWallets": "المحافظ",
   "navigationProfile": "الملف الشخصي",
   "navigationSetting": "الإعدادات",
-
   "comment_image_picker_controller": "==== Image Picker Controller ====",
   "imagePickerGalleryError": "فشل اختيار الصورة من المعرض",
   "imagePickerCameraError": "فشل التقاط الصورة من الكاميرا",
-
   "comment_biometric_auth_service": "==== Biometric Auth Service ====",
   "biometricDeviceNotSupported": "هذا الجهاز لا يدعم التحقق البيومتري.",
   "biometricNoEnrolled": "لا يوجد بصمة مسجلة. يرجى إعداد بصمة الإصبع",
@@ -32,7 +25,6 @@
   "biometricAuthenticationFailed": "فشل التحقق البيومتري.",
   "biometricCheckFailed": "تعذر التحقق من توفر التحقق البيومتري.",
   "biometricAuthenticateReason": "التحقق لتسجيل الدخول",
-
   "comment_network_service": "==== Network Service ====",
   "networkServiceUnexpectedError": "حدث خطأ غير متوقع. حاول مرة أخرى.",
   "networkServiceTimeout": "انتهت مهلة الطلب. حاول مرة أخرى.",
@@ -40,7 +32,6 @@
   "networkServiceUnauthorizedText": "غير مصرح",
   "networkServiceOkText": "موافق",
   "networkServiceUnauthorizedMessage": "غير مصرح لك بالوصول إلى هذا المورد. يرجى تسجيل الدخول مرة أخرى!",
-
   "comment_api_access_key_screen": "==== API Access Key Screen ====",
   "apiAccessKeyTitle": "مفتاح الوصول API",
   "apiAccessKeyPublicKeyLabel": "المفتاح العام",
@@ -50,14 +41,12 @@
   "apiAccessKeyRegenerateButton": "إعادة إنشاء",
   "apiAccessKeyGenerateAlertTitle": "إنشاء مفتاح وصول API جديد",
   "apiAccessKeyGenerateAlertMessage": "هل أنت متأكد أنك تريد إنشاء مفتاح وصول API جديد؟",
-
   "comment_forgot_password_screen": "==== Forgot Password Screen ====",
   "forgotPasswordTitle": "نسيت كلمة المرور",
   "forgotPasswordEmailLabel": "البريد الإلكتروني",
   "forgotPasswordEmailRequired": "حقل البريد الإلكتروني مطلوب",
   "forgotPasswordSendButton": "إرسال رمز التحقق",
   "forgotPasswordGoBackButton": "رجوع",
-
   "comment_reset_password_screen": "==== Reset Password Screen ====",
   "resetPasswordTitle": "إعادة تعيين كلمة المرور",
   "resetPasswordPasswordLabel": "كلمة المرور",
@@ -69,7 +58,6 @@
   "resetPasswordButton": "إعادة تعيين",
   "resetPasswordAlreadyHaveAccount": "لديك حساب بالفعل؟ ",
   "resetPasswordLoginLink": "تسجيل الدخول",
-
   "comment_forgot_password_pin_verification_screen": "==== Forgot Password Pin Verification Screen ====",
   "forgotPasswordPinVerificationTitle": "تحقق من رمز التحقق",
   "forgotPasswordPinVerificationEnterOtp": "أدخل رمز التحقق",
@@ -79,7 +67,6 @@
   "forgotPasswordPinVerificationVerifyButton": "تحقق من الرمز",
   "forgotPasswordPinVerificationDidNotReceive": "لم تستلم الرمز؟ ",
   "forgotPasswordPinVerificationResend": "إعادة إرسال",
-
   "comment_login_screen": "==== Login Screen ====",
   "loginTitle": "تسجيل دخول التاجر",
   "loginEmailLabel": "البريد الإلكتروني",
@@ -92,7 +79,6 @@
   "loginCreateAccount": "إنشاء حساب",
   "loginFirstSignInRequired": "أول تسجيل دخول باستخدام البريد الإلكتروني وكلمة المرور",
   "loginBiometricNotEnabled": "التحقق البيومتري غير مفعل",
-
   "comment_two_factor_auth_screen": "==== Two Factor Auth Screen ====",
   "twoFactorAuthTitle": "التحقق بخطوتين",
   "twoFactorAuthEnterOtp": "أدخل رمز التحقق",
@@ -100,11 +86,9 @@
   "twoFactorAuthVerifyButton": "تحقق",
   "twoFactorAuthBackToLogin": "العودة إلى؟ ",
   "twoFactorAuthLoginLink": "تسجيل الدخول",
-
   "comment_auth_id_verification_screen": "==== Auth ID Verification Screen ====",
   "authIdVerificationInvalidType": "نوع الحقل غير صالح",
   "authIdVerificationUnknownType": "نوع حقل غير معروف: {fieldType}",
-
   "comment_email_screen": "==== Email Screen ====",
   "emailTitle": "تسجيل التاجر",
   "emailLabel": "البريد الإلكتروني",
@@ -112,7 +96,6 @@
   "emailContinueButton": "متابعة",
   "emailAlreadyHaveAccount": "لديك حساب بالفعل؟ ",
   "emailLoginLink": "تسجيل الدخول",
-
   "comment_personal_info_screen": "==== Personal Info Screen ====",
   "personalInfoTitle": "تسجيل التاجر",
   "personalInfoSectionTitle": "المعلومات الأساسية",
@@ -133,7 +116,6 @@
   "personalInfoSelectGenderTitle": "اختر الجنس",
   "personalInfoCountryNotFound": "لا توجد بلد",
   "personalInfoGenderNotFound": "لا يوجد جنس",
-
   "comment_set_up_password_screen": "==== Set Up Password Screen ====",
   "setUpPasswordTitle": "تسجيل التاجر",
   "setUpPasswordSectionTitle": "إعداد كلمة المرور",
@@ -147,7 +129,6 @@
   "setUpPasswordConfirmPasswordRequired": "يرجى تأكيد كلمة المرور",
   "setUpPasswordPasswordsDontMatch": "كلمتا المرور غير متطابقتين",
   "setUpPasswordAcceptTerms": "يرجى الموافقة على الشروط والأحكام",
-
   "comment_sign_up_status_screen": "==== Sign Up Status Screen ====",
   "signUpStatusCurrentStatusTitle": "الحالة الحالية",
   "signUpStatusSetupNextStepTitle": "لنقم بإعداد خطوتك التالية",
@@ -163,7 +144,6 @@
   "signUpStatusDashboardButton": "لوحة التحكم",
   "signUpStatusBackButton": "رجوع",
   "signUpStatusErrorProcessingStep": "خطأ في معالجة الخطوة التالية. حاول مرة أخرى.",
-
   "comment_verify_email_screen": "==== Verify Email Screen ====",
   "verifyEmailMerchantRegisterTitle": "تسجيل التاجر",
   "verifyEmailVerifyEmailTitle": "تحقق البريد الإلكتروني",
@@ -174,7 +154,6 @@
   "verifyEmailOtpRequiredError": "حقل رمز التحقق مطلوب",
   "verifyEmailDidntReceiveCode": "لم تستلم الرمز؟ ",
   "verifyEmailResendText": "إعادة إرسال",
-
   "comment_welcome_screen": "==== Welcome Screen ====",
   "welcomeTitle": "مرحباً بك في التاجر",
   "welcomeSubtitle": "إدارة المدفوعات، تتبع المبيعات، وتنمية أعمالك",
@@ -182,31 +161,26 @@
   "welcomeLoginButton": "تسجيل الدخول",
   "welcomeExitApplicationTitle": "الخروج من التطبيق",
   "welcomeExitApplicationMessage": "هل أنت متأكد أنك تريد الخروج من التطبيق؟",
-
   "comment_change_password_controller": "==== Change Password Controller Messages ====",
   "changePasswordCurrentPasswordRequired": "يرجى إدخال كلمة المرور الحالية",
   "changePasswordNewPasswordRequired": "يرجى إدخال كلمة مرور جديدة",
   "changePasswordPasswordLength": "كلمة المرور يجب أن تكون 8 أحرف على الأقل",
   "changePasswordConfirmPasswordRequired": "يرجى تأكيد كلمة المرور الجديدة",
   "changePasswordPasswordsDontMatch": "كلمتا المرور غير متطابقتين",
-
   "comment_change_password_screen": "==== Change Password Screen ====",
   "changePasswordScreenTitle": "تغيير كلمة المرور",
   "changePasswordCurrentPasswordLabel": "كلمة المرور الحالية",
   "changePasswordNewPasswordLabel": "كلمة المرور الجديدة",
   "changePasswordConfirmPasswordLabel": "تأكيد كلمة المرور",
   "changePasswordSaveChangesButton": "حفظ التغييرات",
-
   "comment_exchange_controller": "==== Exchange Controller Messages ====",
   "exchangeSelectFromWalletError": "يرجى اختيار محفظة المصدر",
   "exchangeSelectToWalletError": "يرجى اختيار محفظة الوجهة",
   "exchangeEnterAmountError": "يرجى إدخال المبلغ",
   "exchangeMinAmountError": "الحد الأدنى للمبلغ يجب أن يكون",
   "exchangeMaxAmountError": "الحد الأقصى للمبلغ يجب أن يكون",
-
   "comment_exchange_screen": "==== Exchange Screen ====",
   "exchangeScreenTitle": "تبديل",
-
   "comment_exchange_amount_step_section": "==== Exchange Amount Step Section ====",
   "exchangeFromWalletLabel": "من محفظة",
   "exchangeSelectFromWalletTitle": "اختر محفظة المصدر",
@@ -218,7 +192,6 @@
   "exchangeMinMaxLabel": "الحد الأدنى {min} {currency} والحد الأقصى {max} {currency}",
   "exchangeRateLabel": "سعر الصرف:",
   "exchangeButton": "تبديل",
-
   "comment_exchange_review_step_section": "==== Exchange Review Step Section ====",
   "exchangeReviewTitle": "مراجعة التبديل",
   "exchangeReviewAmount": "المبلغ",
@@ -229,7 +202,6 @@
   "exchangeReviewExchangeRate": "سعر الصرف",
   "exchangeReviewExchangeAmount": "مبلغ التبديل",
   "exchangeReviewExchangeNowButton": "تبديل الآن",
-
   "comment_exchange_success_step_section": "==== Exchange Success Step Section ====",
   "exchangeSuccessTitle": "تم التبديل بنجاح",
   "exchangeSuccessSubtitle": "تمت عملية التبديل بنجاح",
@@ -241,7 +213,6 @@
   "exchangeSuccessFinalAmount": "المبلغ النهائي",
   "exchangeSuccessBackHomeButton": "العودة للرئيسية",
   "exchangeSuccessExchangeAgainButton": "تبديل مرة أخرى",
-
   "comment_home_controller": "==== Home Controller Messages ====",
   "homeBiometricNotSupported": "هذا الجهاز لا يدعم التحقق البيومتري.",
   "homeBiometricEnabledSuccess": "تم تفعيل التحقق البيومتري بنجاح",
@@ -251,7 +222,6 @@
   "homeBiometricNotFoundMessage": "لا توجد بصمة أو تحقق بيومتري مسجل على هذا الجهاز. يمكنك إعداده من إعدادات النظام.",
   "homeOpenSecuritySettingsButton": "فتح إعدادات الأمان",
   "homeIosBiometricMessage": "يرجى الذهاب إلى الإعدادات > Face ID & Passcode لإعداد التحقق البيومتري.",
-
   "comment_drawer_section": "==== Drawer Section ====",
   "drawerDashboard": "لوحة التحكم",
   "drawerMyWallets": "محافظي",
@@ -263,14 +233,11 @@
   "drawerInvoice": "فاتورة",
   "drawerNotifications": "الإشعارات",
   "drawerSupportTicket": "تذكرة الدعم",
-
   "comment_home_header_section": "==== Home Header Section ====",
   "homeHeaderAccountNumberCopied": "تم نسخ رقم الحساب",
   "homeHeaderMerchantIdPrefix": "معرف التاجر:",
-
   "comment_home_section_navigator": "==== Home Section Navigator ====",
   "homeViewAll": "عرض الكل",
-
   "comment_home_transaction_details": "==== Home Transaction Details ====",
   "transactionDetailsTitle": "تفاصيل المعاملة",
   "transactionDescription": "الوصف",
@@ -280,15 +247,12 @@
   "transactionMethod": "الطريقة",
   "transactionTotalAmount": "المبلغ الإجمالي",
   "transactionStatus": "الحالة",
-
   "comment_home_transactions_section": "==== Home Transactions Section ====",
   "homeRecentTransactions": "أحدث المعاملات",
-
   "comment_home_wallets_section": "==== Home Wallets Section ====",
   "homeMyWallets": "محافظي",
   "homeNoWalletsFound": "لا توجد محافظ",
   "homeWalletWithdrawButton": "سحب",
-
   "comment_settings_bottom_sheet": "==== Settings Bottom Sheet ====",
   "settingsProfileSetting": "إعدادات الملف الشخصي",
   "settingsChangePassword": "تغيير كلمة المرور",
@@ -296,7 +260,6 @@
   "settingsTwoFa": "التحقق بخطوتين",
   "settingsSupport": "الدعم",
   "settingsLogout": "تسجيل الخروج",
-
   "comment_kyc_details_bottom_sheet": "==== KYC Details Bottom Sheet ====",
   "kycDetailsTitle": "تفاصيل التحقق",
   "kycDetailsStatusLabel": "الحالة:",
@@ -306,7 +269,6 @@
   "kycDetailsCreatedAtLabel": "تاريخ الإنشاء:",
   "kycDetailsMessageFromAdmin": "رسالة من الإدارة:",
   "kycDetailsSubmittedData": "البيانات المقدمة",
-
   "comment_kyc_history_screen": "==== KYC History Screen ====",
   "kycHistoryTitle": "سجل التحقق",
   "kycHistoryDateLabel": "التاريخ:",
@@ -315,7 +277,6 @@
   "kycHistoryStatusApproved": "تمت الموافقة",
   "kycHistoryStatusRejected": "مرفوض",
   "kycHistoryViewButton": "عرض",
-
   "comment_id_verification_screen": "==== ID Verification Screen ====",
   "idVerificationTitle": "التحقق من الهوية",
   "idVerificationHistory": "السجل",
@@ -325,7 +286,6 @@
   "idVerificationStatus2Message": "لقد قدمت مستنداتك وهي في انتظار الموافقة",
   "idVerificationStatus3Message": "فشل التحقق من KYC الخاص بك. يرجى إعادة تقديم المستندات.",
   "idVerificationStatus4Message": "لم تقم بتقديم أي مستندات KYC بعد",
-
   "comment_create_invoice_controller": "==== Create Invoice Controller Messages ====",
   "createInvoiceInvoiceToRequired": "يرجى إدخال المستلم",
   "createInvoiceEmailRequired": "يرجى إدخال البريد الإلكتروني",
@@ -337,19 +297,16 @@
   "createInvoiceItemQuantityRequired": "البند {number}: يجب أن تكون الكمية أكبر من 0",
   "createInvoiceItemUnitPriceRequired": "البند {number}: يجب أن يكون سعر الوحدة أكبر من 0",
   "createInvoiceSomethingWentWrong": "حدث خطأ ما!",
-
   "comment_create_invoice_screen": "==== Create Invoice Screen ====",
   "createInvoiceScreenTitle": "إنشاء فاتورة",
   "createInvoiceScreenInvoiceItems": "بنود الفاتورة",
   "createInvoiceScreenAddItem": "إضافة بند",
   "createInvoiceScreenCreateInvoiceButton": "إنشاء فاتورة",
-
   "comment_create_invoice_add_item_section": "==== Create Invoice Add Item Section ====",
   "createInvoiceAddItemItemName": "اسم البند",
   "createInvoiceAddItemQuantity": "الكمية",
   "createInvoiceAddItemUnitPrice": "سعر الوحدة",
   "createInvoiceAddItemSubTotal": "المجموع الفرعي",
-
   "comment_create_invoice_information_section": "==== Create Invoice Information Section ====",
   "createInvoiceInformationTitle": "معلومات الفاتورة",
   "createInvoiceInformationInvoiceTo": "إلى",
@@ -362,7 +319,6 @@
   "createInvoiceInformationWalletsNotFound": "المحافظ غير موجودة",
   "createInvoiceInformationSelectStatusTitle": "اختر الحالة",
   "createInvoiceInformationStatusNotFound": "الحالة غير موجودة",
-
   "comment_invoice_details_screen": "==== Invoice Details Screen ====",
   "invoiceDetailsTitle": "فاتورة",
   "invoiceDetailsRefNumber": "المرجع: #{number}",
@@ -379,7 +335,6 @@
   "invoiceDetailsSubTotal": "المجموع الفرعي",
   "invoiceDetailsPayNowButton": "ادفع الآن",
   "invoiceDetailsPrintInvoiceButton": "طباعة الفاتورة",
-
   "comment_invoice_pdf": "==== Invoice PDF Generator ====",
   "invoicePdfRefNumber": "المرجع: #{number}",
   "invoicePdfIssuedDate": "تاريخ الإصدار: {date}",
@@ -394,19 +349,16 @@
   "invoicePdfChargeLabel": "الرسوم: ",
   "invoicePdfTotalAmountLabel": "المبلغ الإجمالي: ",
   "invoicePdfThanksMessage": "شكراً لك على الشراء.",
-
   "comment_update_invoice_screen": "==== Update Invoice Screen ====",
   "updateInvoiceTitle": "تحديث الفاتورة",
   "updateInvoiceInvoiceItems": "بنود الفاتورة",
   "updateInvoiceAddItem": "إضافة بند",
   "updateInvoiceUpdateInvoiceButton": "تحديث الفاتورة",
-
   "comment_update_invoice_add_item_section": "==== Update Invoice Add Item Section ====",
   "updateInvoiceAddItemItemName": "اسم البند",
   "updateInvoiceAddItemQuantity": "الكمية",
   "updateInvoiceAddItemUnitPrice": "سعر الوحدة",
   "updateInvoiceAddItemSubTotal": "المجموع الفرعي",
-
   "comment_update_invoice_information_section": "==== Update Invoice Information Section ====",
   "updateInvoiceInformationTitle": "معلومات الفاتورة",
   "updateInvoiceInformationInvoiceTo": "إلى",
@@ -422,7 +374,6 @@
   "updateInvoiceInformationStatusNotFound": "الحالة غير موجودة",
   "updateInvoiceInformationSelectPaymentStatusTitle": "اختر حالة الدفع",
   "updateInvoiceInformationPaymentStatusNotFound": "حالة الدفع غير موجودة",
-
   "comment_invoice_screen": "==== Invoice Screen ====",
   "invoiceScreenTitle": "فاتورة",
   "invoiceScreenCreateInvoice": "إنشاء فاتورة",
@@ -430,11 +381,9 @@
   "invoiceScreenChargeLabel": "الرسوم:",
   "invoiceScreenStatusLabel": "الحالة: ",
   "invoiceScreenViewButton": "عرض",
-
   "comment_notification_screen": "==== Notification Screen ====",
   "notificationScreenTitle": "الإشعارات",
   "notificationScreenMarkAll": "تحديد الكل كمقروء",
-
   "comment_profile_screen": "==== Profile Screen ====",
   "profileScreenTitle": "الملف الشخصي",
   "profileScreenProfileSettings": "إعدادات الملف الشخصي",
@@ -444,7 +393,6 @@
   "profileScreenLogout": "تسجيل الخروج",
   "profileScreenBackButton": "رجوع",
   "profileScreenSelectLanguageTitle": "اختر اللغة",
-
   "comment_profile_settings_screen": "==== Profile Settings Screen ====",
   "profileSettingsTitle": "إعدادات الملف الشخصي",
   "profileSettingsFirstName": "الاسم الأول",
@@ -464,19 +412,16 @@
   "profileSettingsNoGenderFound": "لا يوجد جنس",
   "profileSettingsSelectCountryTitle": "اختر البلد",
   "profileSettingsNoCountryFound": "لا توجد بلد",
-
   "comment_qr_code_screen": "==== QR Code Screen ====",
   "qrCodeTitle": "رمز QR الخاص بي",
   "qrCodeMerchantId": "معرف التاجر: {accountNumber}",
   "qrCodeDownloadButton": "تحميل",
   "qrCodeDownloadSuccess": "تم التحميل بنجاح!",
   "qrCodePermissionRequired": "الإذن مطلوب. يرجى السماح به في الإعدادات.",
-
   "comment_add_new_ticket_controller": "==== Add New Ticket Controller Messages ====",
   "addNewTicketTitleRequired": "يرجى إدخال العنوان",
   "addNewTicketDescriptionRequired": "يرجى إدخال الوصف",
   "addNewTicketSuccessMessage": "تم إنشاء التذكرة بنجاح",
-
   "comment_add_new_ticket_screen": "==== Add New Ticket Screen ====",
   "addNewTicketTitle": "إنشاء تذكرة",
   "addNewTicketTitleLabel": "العنوان",
@@ -484,7 +429,6 @@
   "addNewTicketAddAttach": "إضافة مرفق",
   "addNewTicketAttachFile": "إرفاق ملف",
   "addNewTicketAddTicketButton": "إضافة تذكرة",
-
   "comment_replay_ticket_screen": "==== Replay Ticket Screen ====",
   "replayTicketCloseButton": "إغلاق",
   "replayTicketMessageRequired": "يرجى إدخال رسالة",
@@ -492,42 +436,34 @@
   "replayTicketUnknownFile": "ملف غير معروف",
   "replayTicketTypeMessageHint": "اكتب رسالتك",
   "replayTicketAttachmentPreviewTitle": "معاينة المرفق",
-
   "comment_support_ticket_screen": "==== Support Ticket Screen ====",
   "supportTicketTitle": "تذكرة الدعم",
   "supportTicketStatusOpen": "مفتوحة",
   "supportTicketStatusClosed": "مغلقة",
   "supportTicketViewButton": "عرض",
-
   "comment_transaction_filter_bottom_sheet": "==== Transaction Filter Bottom Sheet ====",
   "transactionFilterTransactionId": "رقم المعاملة",
   "transactionFilterStatus": "الحالة",
   "transactionFilterApplyButton": "تطبيق",
-
   "comment_transactions_screen": "==== Transactions Screen ====",
   "transactionsScreenTitle": "المعاملات",
-
   "comment_two_fa_authentication_screen": "==== 2FA Authentication Screen ====",
   "twoFaAuthenticationTitle": "التحقق بخطوتين",
-
   "comment_disable_two_fa_section": "==== Disable 2FA Section ====",
   "disableTwoFaTitle": "التحقق بخطوتين",
   "disableTwoFaInstruction": "أدخل كلمة المرور لتعطيل التحقق بخطوتين",
   "disableTwoFaPasswordRequired": "يرجى إدخال كلمة المرور",
   "disableTwoFaButton": "تعطيل التحقق بخطوتين",
-
   "comment_enable_two_fa_section": "==== Enable 2FA Section ====",
   "enableTwoFaTitle": "التحقق بخطوتين",
   "enableTwoFaInstruction": "امسح رمز QR بتطبيق Google Authenticator\nلتفعيل التحقق بخطوتين",
   "enableTwoFaPinLabel": "رمز PIN من تطبيق Google Authenticator",
   "enableTwoFaPinRequired": "يرجى إدخال رمز التحقق من Google",
   "enableTwoFaButton": "تفعيل التحقق بخطوتين",
-
   "comment_generate_qr_code_section": "==== Generate QR Code Section ====",
   "generateQrCodeTitle": "التحقق بخطوتين",
   "generateQrCodeDescription": "عزز أمان حسابك باستخدام التحقق بخطوتين",
   "generateQrCodeButton": "إنشاء رمز التحقق",
-
   "comment_create_new_wallet_screen": "==== Create New Wallet Screen ====",
   "createNewWalletTitle": "إنشاء محفظة جديدة",
   "createNewWalletSelectCurrency": "اختر العملة",
@@ -535,12 +471,10 @@
   "createNewWalletCreateButton": "إنشاء",
   "createNewWalletSelectCurrencyTitle": "اختر العملة",
   "createNewWalletNoCurrencyFound": "لا توجد عملة",
-
   "comment_delete_wallet_bottom_sheet": "==== Delete Wallet Bottom Sheet ====",
   "deleteWalletTitle": "هل أنت متأكد؟",
   "deleteWalletMessage": "بمجرد حذف بياناتك، لن تتمكن من استرجاعها!",
   "deleteWalletConfirmButton": "تأكيد",
-
   "comment_wallet_details_screen": "==== Wallet Details Screen ====",
   "walletDetailsTitle": "تفاصيل المحفظة",
   "walletDetailsTotalBalance": "إجمالي الرصيد",
@@ -548,25 +482,21 @@
   "walletDetailsHistory": "السجل",
   "walletDetailsSelectWalletTitle": "اختر المحفظة",
   "walletDetailsWalletNotFound": "المحفظة غير موجودة",
-
   "comment_wallets_screen": "==== Wallets Screen ====",
   "walletsScreenTitle": "محافظي",
   "walletsScreenWithdrawButton": "سحب",
   "walletsScreenDeleteButton": "حذف",
-
   "comment_create_withdraw_account_controller": "==== Create Withdraw Account Controller Messages ====",
   "createWithdrawAccountWalletRequired": "يرجى اختيار محفظة",
   "createWithdrawAccountWithdrawMethodRequired": "يرجى اختيار طريقة سحب",
   "createWithdrawAccountMethodNameRequired": "يرجى إدخال اسم الطريقة",
   "createWithdrawAccountFileRequired": "يرجى رفع ملف لـ {fieldName}",
   "createWithdrawAccountFieldRequired": "يرجى ملء حقل {fieldName}",
-
   "comment_withdraw_controller": "==== Withdraw Controller Messages ====",
   "withdrawWithdrawAccountRequired": "يرجى اختيار حساب سحب",
   "withdrawAmountRequired": "يرجى إدخال المبلغ",
   "withdrawMinAmountError": "الحد الأدنى للمبلغ هو {min} {currency}",
   "withdrawMaxAmountError": "الحد الأقصى للمبلغ هو {max} {currency}",
-
   "comment_create_withdraw_account_screen": "==== Create Withdraw Account Screen ====",
   "createWithdrawAccountScreenTitle": "إنشاء حساب سحب",
   "createWithdrawAccountScreenHeader": "إنشاء حساب سحب",
@@ -578,31 +508,25 @@
   "createWithdrawAccountScreenWalletNotFound": "المحفظة غير موجودة",
   "createWithdrawAccountScreenSelectMethodTitle": "اختر الطريقة",
   "createWithdrawAccountScreenWithdrawMethodNotFound": "طريقة السحب غير موجودة",
-
   "comment_edit_withdraw_account_screen": "==== Edit Withdraw Account Screen ====",
   "editWithdrawAccountScreenTitle": "تعديل حساب السحب",
   "editWithdrawAccountScreenHeader": "تعديل حساب السحب",
   "editWithdrawAccountScreenMethodNameLabel": "اسم الطريقة",
   "editWithdrawAccountScreenUpdateButton": "تحديث",
-
   "comment_withdraw_screen": "==== Withdraw Screen ====",
   "withdrawScreenTitle": "سحب أموال",
-
   "comment_delete_account_dropdown_section": "==== Delete Account Dropdown Section ====",
   "deleteAccountTitle": "حذف حساب السحب؟",
   "deleteAccountWarningPart1": "لا يمكن التراجع عن هذا. جميع البيانات سيتم",
   "deleteAccountWarningPart2": " حذفها.",
   "deleteAccountDeleteButton": "حذف",
   "deleteAccountCancelButton": "إلغاء",
-
   "comment_withdraw_account_filter_bottom_sheet": "==== Withdraw Account Filter Bottom Sheet ====",
   "withdrawAccountFilterAccountName": "اسم الحساب",
   "withdrawAccountFilterSearchButton": "بحث",
-
   "comment_withdraw_account_section": "==== Withdraw Account Section ====",
   "withdrawAccountSectionAllAccount": "جميع الحسابات",
   "withdrawAccountSectionAddAccount": "إضافة حساب",
-
   "comment_withdraw_amount_step_section": "==== Withdraw Amount Step Section ====",
   "withdrawAmountStepAccount": "الحساب",
   "withdrawAmountStepAmount": "المبلغ",
@@ -612,14 +536,12 @@
   "withdrawAmountStepWithdrawAccountNotFound": "حساب السحب غير موجود",
   "withdrawAmountStepSelectWalletTitle": "اختر المحفظة",
   "withdrawAmountStepWalletsNotFound": "المحافظ غير موجودة",
-
   "comment_withdraw_review_step_section": "==== Withdraw Review Step Section ====",
   "withdrawReviewStepTitle": "مراجعة التفاصيل",
   "withdrawReviewStepAmount": "المبلغ",
   "withdrawReviewStepCharge": "الرسوم",
   "withdrawReviewStepTotal": "الإجمالي",
   "withdrawReviewStepWithdrawNowButton": "سحب الآن",
-
   "comment_withdraw_success_step_section": "==== Withdraw Success Step Section ====",
   "withdrawSuccessStepTitle": "السحب قيد الانتظار",
   "withdrawSuccessStepSubtitle": "أموالك قيد انتظار\nالسحب.",
@@ -631,21 +553,129 @@
   "withdrawSuccessStepDateTime": "التاريخ والوقت",
   "withdrawSuccessStepBackHomeButton": "العودة للرئيسية",
   "withdrawSuccessStepWithdrawAgainButton": "سحب مرة أخرى",
-
   "comment_withdraw_toggle_section": "==== Withdraw Toggle Section ====",
   "withdrawToggleWithdraw": "سحب",
   "withdrawToggleWithdrawAccount": "حساب السحب",
-
   "comment_dynamic_attachment_preview": "==== Dynamic Attachment Preview ====",
   "dynamicAttachmentPreviewTitle": "معاينة المرفق",
-
   "comment_no_internet_connection_screen": "==== No Internet Connection Screen ====",
   "noInternetConnectionTitle": "لا يوجد اتصال بالإنترنت",
   "noInternetConnectionMessage": "يرجى التحقق من إعدادات الشبكة",
   "noInternetConnectionRetryButton": "إعادة المحاولة",
-
   "comment_web_view_screen": "==== Web View Screen ====",
   "webViewPaymentSuccess": "تمت الدفعة بنجاح!",
   "webViewPaymentFailed": "فشلت الدفعة!",
-  "webViewPaymentCancelled": "تم إلغاء الدفعة!"
+  "webViewPaymentCancelled": "تم إلغاء الدفعة!",
+  "kycDocumentsRequired": "المستندات مطلوبة.",
+  "kycUploadFailed": "فشل الرفع. حاول مرة أخرى.",
+  "pickDocumentFailed": "فشل اختيار المستند. حاول مرة أخرى.",
+  "kycFeatureCashout": "الصرف النقدي",
+  "kycFeatureEpay": "الدفع الإلكتروني (ePay)",
+  "kycFeatureExchange": "الصرافة",
+  "kycFeatureGiftRedeem": "استبدال الهدايا",
+  "kycFeatureGiftSend": "إرسال الهدايا",
+  "kycFeatureInvoices": "دفع فواتير الشراء",
+  "kycFeaturePayBill": "دفع الفواتير",
+  "kycFeaturePayment": "الدفع للتاجر",
+  "kycFeaturePaymentLinks": "روابط الدفع",
+  "kycFeatureRemittance": "الحوالات المالية",
+  "kycFeatureRequestMoney": "طلبات المال",
+  "kycFeatureTransfer": "التحويل",
+  "kycFeatureTravel": "حجز السفر",
+  "kycFeatureWithdraw": "السحب",
+  "kycLimitsSectionTitle": "حدود المعاملات",
+  "kycRoadmapContinueForLevel": "متابعة التحقق — المستوى {level}",
+  "@kycRoadmapContinueForLevel": {
+    "placeholders": {
+      "level": {
+        "type": "int"
+      }
+    }
+  },
+  "kycRoadmapPending": "مستنداتك قيد المراجعة. يستغرق ذلك عادةً من 1 إلى 2 يوم عمل.",
+  "kycRoadmapRejectedAction": "يرجى إعادة إرسال مستنداتك.",
+  "kycRoadmapRejectedTitle": "تم رفض التحقق من هويتك.",
+  "kycRoadmapStatusAvailable": "جاهز للترقية",
+  "kycRoadmapStatusCompleted": "مكتمل",
+  "kycRoadmapStatusCurrent": "الحالي",
+  "kycRoadmapStatusLocked": "مقفل",
+  "kycRoadmapTitle": "خارطة التحقق من الهوية",
+  "kycSubmitWizardContinue": "متابعة",
+  "kycSubmitWizardFileFormat": "الصيغة: JPG، PNG، PDF — بحد أقصى 5 ميغابايت",
+  "kycSubmitWizardInvalidLevel": "مستوى غير صالح",
+  "kycSubmitWizardNotUploaded": "لم يُرفع",
+  "kycSubmitWizardRequiredDoc": "المستند المطلوب",
+  "kycSubmitWizardReviewNote": "بعد الإرسال تتم مراجعة مستنداتك من قبل المشرف. يستغرق ذلك عادةً من 1 إلى 2 يوم عمل.",
+  "kycSubmitWizardReviewTitle": "المراجعة والإرسال",
+  "kycSubmitWizardSubmit": "إرسال المستندات",
+  "kycSubmitWizardTapToUpload": "اضغط للرفع",
+  "kycSubmitWizardTitleForLevel": "التحقق من الهوية — المستوى {level}",
+  "@kycSubmitWizardTitleForLevel": {
+    "placeholders": {
+      "level": {
+        "type": "int"
+      }
+    }
+  },
+  "kycSubmitWizardUploaded": "تم الرفع: {fileName}",
+  "@kycSubmitWizardUploaded": {
+    "placeholders": {
+      "fileName": {
+        "type": "String"
+      }
+    }
+  },
+  "kycUpgradeBodyForLevel": "لاستخدام هذه الميزة، يجب أن يصل التحقق من هويتك إلى المستوى {level}.",
+  "@kycUpgradeBodyForLevel": {
+    "placeholders": {
+      "level": {
+        "type": "int"
+      }
+    }
+  },
+  "kycUpgradeBodyGeneric": "مستوى التحقق الحالي الخاص بك لا يسمح بهذا الإجراء. يرجى إكمال أو ترقية التحقق من هويتك.",
+  "kycUpgradeCurrentLevel": "مستواك الحالي",
+  "kycUpgradeLater": "سأقوم بذلك لاحقاً",
+  "kycUpgradeLevelChip": "المستوى {level}",
+  "@kycUpgradeLevelChip": {
+    "placeholders": {
+      "level": {
+        "type": "int"
+      }
+    }
+  },
+  "kycUpgradeRequiredLevel": "المستوى المطلوب",
+  "kycUpgradeRequiredTitle": "مطلوب ترقية التحقق من الهوية",
+  "kycUpgradeStartVerification": "بدء التحقق من الهوية",
+  "kycDocBusinessInfo": "معلومات العمل التجاري",
+  "kycDocBusinessInfoHint": "معلومات كاملة عن العمل التجاري بما في ذلك الاسم ونوع النشاط والعنوان.",
+  "kycDocCompanyDocs": "مستندات الشركة",
+  "kycDocCompanyDocsHint": "مستندات تسجيل الشركة والنظام الأساسي وإشعار التأسيس.",
+  "kycDocGenericHint": "يرجى رفع المستند المطلوب.",
+  "kycDocGovtId": "وثيقة هوية",
+  "kycDocGovtIdHint": "صورة واضحة للوجه والخلف لوثيقة الهوية. يجب أن تكون جميع التفاصيل مقروءة.",
+  "kycDocNationalCard": "بطاقة الهوية الوطنية",
+  "kycDocNationalCardHint": "صورة واضحة للوجهين من بطاقة الهوية الوطنية. يجب أن تكون جميع التفاصيل مقروءة.",
+  "kycDocPersonalInfo": "المعلومات الشخصية",
+  "kycDocPersonalInfoHint": "المعلومات الشخصية بما في ذلك العنوان والرمز البريدي ورقم الهاتف.",
+  "kycDocSelfie": "صورة سيلفي",
+  "kycDocSelfieHint": "التقط صورة سيلفي واضحة بإضاءة جيدة ووجه مرئي بالكامل.",
+  "kycDocSourceOfFunds": "إثبات مصدر الأموال",
+  "kycDocSourceOfFundsHint": "مستند يثبت مصدر أموالك (قسيمة راتب، كشف حساب بنكي، دخل تجاري…).",
+  "kycDocTradeLicense": "رخصة تجارية",
+  "kycDocTradeLicenseHint": "نسخة ممسوحة ضوئياً من رخصة تجارية سارية.",
+  "kycDocVideoVerification": "التحقق بالفيديو",
+  "kycDocVideoVerificationHint": "سجّل مقطع فيديو قصيراً لوجهك وفق التعليمات الظاهرة على الشاشة.",
+  "kycLimitGroupCashin": "الإيداع",
+  "kycLimitGroupCashout": "الصرف النقدي",
+  "kycLimitGroupExchange": "الصرافة",
+  "kycLimitGroupGift": "الهدايا",
+  "kycLimitGroupPayment": "الدفع",
+  "kycLimitGroupTransfer": "التحويل",
+  "kycLimitMeasureDaily": "يومياً",
+  "kycLimitMeasureMax": "حد أقصى",
+  "kycLimitMeasureMin": "حد أدنى",
+  "kycLimitMeasureMonthly": "شهرياً",
+  "kycLimitPaycardoTopup": "شحن PayCardo",
+  "kycCheckUnavailable": "بررسی احراز هویت موقتاً در دسترس نیست. لطفاً کمی بعد دوباره تلاش کنید."
 }

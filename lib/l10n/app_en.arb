@@ -1,30 +1,23 @@
 {
   "@@locale": "en",
-
   "comment_common_maintenance": "==== Maintenance ====",
   "maintenanceTitle": "Under Maintenance",
   "maintenanceSubtitle": "We're performing scheduled maintenance to improve your experience.",
-
   "comment_all_controller": "==== All Controller Error Message ====",
   "allControllerGeneralError": "Something went wrong!",
-
   "comment_exit_app_message": "==== Exit App Message ====",
   "exitAppTitle": "Exit Application",
   "exitAppMessage": "Are you sure you want to exit the application?",
-
   "comment_splash_screen": "==== Splash Screen ====",
   "splashMerchant": "Merchant",
-
   "comment_navigation_screen": "==== Navigation Screen ====",
   "navigationHome": "Home",
   "navigationWallets": "Wallets",
   "navigationProfile": "Profile",
   "navigationSetting": "Setting",
-
   "comment_image_picker_controller": "==== Image Picker Controller ====",
   "imagePickerGalleryError": "Failed to pick image from gallery",
   "imagePickerCameraError": "Failed to pick image from camera",
-
   "comment_biometric_auth_service": "==== Biometric Auth Service ====",
   "biometricDeviceNotSupported": "This device does not support biometrics.",
   "biometricNoEnrolled": "No biometric enrolled. Please set up fingerprint",
@@ -32,7 +25,6 @@
   "biometricAuthenticationFailed": "Biometric authentication failed.",
   "biometricCheckFailed": "Unable to check biometric availability.",
   "biometricAuthenticateReason": "Authenticate to log in",
-
   "comment_network_service": "==== Network Service ====",
   "networkServiceUnexpectedError": "An unexpected error occurred. Please try again.",
   "networkServiceTimeout": "Request timed out. Please try again.",
@@ -40,7 +32,6 @@
   "networkServiceUnauthorizedText": "Unauthorized",
   "networkServiceOkText": "OK",
   "networkServiceUnauthorizedMessage": "You are not authorized to access this resource. Please log in again!",
-
   "comment_api_access_key_screen": "==== API Access Key Screen ====",
   "apiAccessKeyTitle": "API Access Key",
   "apiAccessKeyPublicKeyLabel": "Public Key",
@@ -50,14 +41,12 @@
   "apiAccessKeyRegenerateButton": "Regenerate",
   "apiAccessKeyGenerateAlertTitle": "Generate New API Access Key",
   "apiAccessKeyGenerateAlertMessage": "Are you sure you want to generate a new API access key?",
-
   "comment_forgot_password_screen": "==== Forgot Password Screen ====",
   "forgotPasswordTitle": "Forgot Password",
   "forgotPasswordEmailLabel": "Email",
   "forgotPasswordEmailRequired": "The email field is required",
   "forgotPasswordSendButton": "Send Verify OTP",
   "forgotPasswordGoBackButton": "Go Back",
-
   "comment_reset_password_screen": "==== Reset Password Screen ====",
   "resetPasswordTitle": "Reset Password",
   "resetPasswordPasswordLabel": "Password",
@@ -69,7 +58,6 @@
   "resetPasswordButton": "Reset",
   "resetPasswordAlreadyHaveAccount": "Already have an account? ",
   "resetPasswordLoginLink": "Login",
-
   "comment_forgot_password_pin_verification_screen": "==== Forgot Password Pin Verification Screen ====",
   "forgotPasswordPinVerificationTitle": "Verify OTP",
   "forgotPasswordPinVerificationEnterOtp": "Enter OTP",
@@ -79,7 +67,6 @@
   "forgotPasswordPinVerificationVerifyButton": "Verify OTP",
   "forgotPasswordPinVerificationDidNotReceive": "Didn't receive the code? ",
   "forgotPasswordPinVerificationResend": "Resend",
-
   "comment_login_screen": "==== Login Screen ====",
   "loginTitle": "Merchant Login",
   "loginEmailLabel": "Email",
@@ -92,7 +79,6 @@
   "loginCreateAccount": "Create one",
   "loginFirstSignInRequired": "First Sign In with Email and Password",
   "loginBiometricNotEnabled": "Your biometric is not enabled",
-
   "comment_two_factor_auth_screen": "==== Two Factor Auth Screen ====",
   "twoFactorAuthTitle": "Verify Two FA",
   "twoFactorAuthEnterOtp": "Enter OTP",
@@ -100,11 +86,9 @@
   "twoFactorAuthVerifyButton": "Verify",
   "twoFactorAuthBackToLogin": "Back to? ",
   "twoFactorAuthLoginLink": "Login",
-
   "comment_auth_id_verification_screen": "==== Auth ID Verification Screen ====",
   "authIdVerificationInvalidType": "Invalid field type",
   "authIdVerificationUnknownType": "Unknown field type: {fieldType}",
-
   "comment_email_screen": "==== Email Screen ====",
   "emailTitle": "Merchant Register",
   "emailLabel": "Email",
@@ -112,7 +96,6 @@
   "emailContinueButton": "Continue",
   "emailAlreadyHaveAccount": "Already have an account? ",
   "emailLoginLink": "Login",
-
   "comment_personal_info_screen": "==== Personal Info Screen ====",
   "personalInfoTitle": "Merchant Register",
   "personalInfoSectionTitle": "Basic Information",
@@ -133,7 +116,6 @@
   "personalInfoSelectGenderTitle": "Select Gender",
   "personalInfoCountryNotFound": "No Country Found",
   "personalInfoGenderNotFound": "No Gender Found",
-
   "comment_set_up_password_screen": "==== Set Up Password Screen ====",
   "setUpPasswordTitle": "Merchant Register",
   "setUpPasswordSectionTitle": "Setup Password",
@@ -147,7 +129,6 @@
   "setUpPasswordConfirmPasswordRequired": "Please confirm your password",
   "setUpPasswordPasswordsDontMatch": "Passwords don't match",
   "setUpPasswordAcceptTerms": "Please accept terms and conditions",
-
   "comment_sign_up_status_screen": "==== Sign Up Status Screen ====",
   "signUpStatusCurrentStatusTitle": "Current Status",
   "signUpStatusSetupNextStepTitle": "Let's set up your next step",
@@ -163,7 +144,6 @@
   "signUpStatusDashboardButton": "Dashboard",
   "signUpStatusBackButton": "Back",
   "signUpStatusErrorProcessingStep": "Error processing next step. Please try again.",
-
   "comment_verify_email_screen": "==== Verify Email Screen ====",
   "verifyEmailMerchantRegisterTitle": "Merchant Register",
   "verifyEmailVerifyEmailTitle": "Verify Email",
@@ -174,7 +154,6 @@
   "verifyEmailOtpRequiredError": "The otp field is required",
   "verifyEmailDidntReceiveCode": "Didn't receive the code? ",
   "verifyEmailResendText": "Resend",
-
   "comment_welcome_screen": "==== Welcome Screen ====",
   "welcomeTitle": "Welcome to Merchant",
   "welcomeSubtitle": "Manage payments, track sales, and grow your business",
@@ -182,31 +161,26 @@
   "welcomeLoginButton": "Login",
   "welcomeExitApplicationTitle": "Exit Application",
   "welcomeExitApplicationMessage": "Are you sure you want to exit the application?",
-
   "comment_change_password_controller": "==== Change Password Controller Messages ====",
   "changePasswordCurrentPasswordRequired": "Please enter your current password",
   "changePasswordNewPasswordRequired": "Please enter a new password",
   "changePasswordPasswordLength": "Password must be at least 8 characters",
   "changePasswordConfirmPasswordRequired": "Please confirm your new password",
   "changePasswordPasswordsDontMatch": "Passwords do not match",
-
   "comment_change_password_screen": "==== Change Password Screen ====",
   "changePasswordScreenTitle": "Change Password",
   "changePasswordCurrentPasswordLabel": "Current Password",
   "changePasswordNewPasswordLabel": "New password",
   "changePasswordConfirmPasswordLabel": "Confirm password",
   "changePasswordSaveChangesButton": "Save Changes",
-
   "comment_exchange_controller": "==== Exchange Controller Messages ====",
   "exchangeSelectFromWalletError": "Please select a from wallet",
   "exchangeSelectToWalletError": "Please select a to wallet",
   "exchangeEnterAmountError": "Please enter an amount",
   "exchangeMinAmountError": "Minimum amount should be",
   "exchangeMaxAmountError": "Maximum amount should be",
-
   "comment_exchange_screen": "==== Exchange Screen ====",
   "exchangeScreenTitle": "Exchange",
-
   "comment_exchange_amount_step_section": "==== Exchange Amount Step Section ====",
   "exchangeFromWalletLabel": "From Wallet",
   "exchangeSelectFromWalletTitle": "Select From Wallet",
@@ -218,7 +192,6 @@
   "exchangeMinMaxLabel": "Minimum {min} {currency} and Maximum {max} {currency}",
   "exchangeRateLabel": "Exchange Rate:",
   "exchangeButton": "Exchange",
-
   "comment_exchange_review_step_section": "==== Exchange Review Step Section ====",
   "exchangeReviewTitle": "Exchange Review",
   "exchangeReviewAmount": "Amount",
@@ -229,7 +202,6 @@
   "exchangeReviewExchangeRate": "Exchange Rate",
   "exchangeReviewExchangeAmount": "Exchange Amount",
   "exchangeReviewExchangeNowButton": "Exchange Now",
-
   "comment_exchange_success_step_section": "==== Exchange Success Step Section ====",
   "exchangeSuccessTitle": "Exchange Success",
   "exchangeSuccessSubtitle": "Your exchange have been successfully",
@@ -241,7 +213,6 @@
   "exchangeSuccessFinalAmount": "Final Amount",
   "exchangeSuccessBackHomeButton": "Back Home",
   "exchangeSuccessExchangeAgainButton": "Exchange Again",
-
   "comment_home_controller": "==== Home Controller Messages ====",
   "homeBiometricNotSupported": "This device does not support biometrics.",
   "homeBiometricEnabledSuccess": "Biometric enabled successfully",
@@ -251,7 +222,6 @@
   "homeBiometricNotFoundMessage": "No fingerprint or biometric is enrolled on this device. You can set it up from the system settings.",
   "homeOpenSecuritySettingsButton": "Open Security Settings",
   "homeIosBiometricMessage": "Please go to Settings > Face ID & Passcode to set up biometrics.",
-
   "comment_drawer_section": "==== Drawer Section ====",
   "drawerDashboard": "Dashboard",
   "drawerMyWallets": "My Wallets",
@@ -263,14 +233,11 @@
   "drawerInvoice": "Invoice",
   "drawerNotifications": "Notifications",
   "drawerSupportTicket": "Support Ticket",
-
   "comment_home_header_section": "==== Home Header Section ====",
   "homeHeaderAccountNumberCopied": "Account Number Copied",
   "homeHeaderMerchantIdPrefix": "MID:",
-
   "comment_home_section_navigator": "==== Home Section Navigator ====",
   "homeViewAll": "View All",
-
   "comment_home_transaction_details": "==== Home Transaction Details ====",
   "transactionDetailsTitle": "Transaction Details",
   "transactionDescription": "Description",
@@ -280,15 +247,12 @@
   "transactionMethod": "Method",
   "transactionTotalAmount": "Total Amount",
   "transactionStatus": "Status",
-
   "comment_home_transactions_section": "==== Home Transactions Section ====",
   "homeRecentTransactions": "Recent Transactions",
-
   "comment_home_wallets_section": "==== Home Wallets Section ====",
   "homeMyWallets": "My Wallets",
   "homeNoWalletsFound": "No wallets found",
   "homeWalletWithdrawButton": "Withdraw",
-
   "comment_settings_bottom_sheet": "==== Settings Bottom Sheet ====",
   "settingsProfileSetting": "Profile Setting",
   "settingsChangePassword": "Change Password",
@@ -296,7 +260,6 @@
   "settingsTwoFa": "2FA",
   "settingsSupport": "Support",
   "settingsLogout": "Logout",
-
   "comment_kyc_details_bottom_sheet": "==== KYC Details Bottom Sheet ====",
   "kycDetailsTitle": "KYC Details",
   "kycDetailsStatusLabel": "Status:",
@@ -306,7 +269,6 @@
   "kycDetailsCreatedAtLabel": "Created At:",
   "kycDetailsMessageFromAdmin": "Message From Admin:",
   "kycDetailsSubmittedData": "Submitted Data",
-
   "comment_kyc_history_screen": "==== KYC History Screen ====",
   "kycHistoryTitle": "KYC History",
   "kycHistoryDateLabel": "Date:",
@@ -315,7 +277,6 @@
   "kycHistoryStatusApproved": "Approved",
   "kycHistoryStatusRejected": "Rejected",
   "kycHistoryViewButton": "View",
-
   "comment_id_verification_screen": "==== ID Verification Screen ====",
   "idVerificationTitle": "ID Verification",
   "idVerificationHistory": "History",
@@ -325,7 +286,6 @@
   "idVerificationStatus2Message": "You have submitted your documents and it is awaiting for the approval",
   "idVerificationStatus3Message": "Your KYC verification has failed. Please resubmit the documents.",
   "idVerificationStatus4Message": "You have not submitted any KYC documents yet",
-
   "comment_create_invoice_controller": "==== Create Invoice Controller Messages ====",
   "createInvoiceInvoiceToRequired": "Please enter an invoice to",
   "createInvoiceEmailRequired": "Please enter an email address",
@@ -337,19 +297,16 @@
   "createInvoiceItemQuantityRequired": "Item {number}: Quantity must be greater than 0",
   "createInvoiceItemUnitPriceRequired": "Item {number}: Unit Price must be greater than 0",
   "createInvoiceSomethingWentWrong": "Something went wrong!",
-
   "comment_create_invoice_screen": "==== Create Invoice Screen ====",
   "createInvoiceScreenTitle": "Create Invoice",
   "createInvoiceScreenInvoiceItems": "Invoice Items",
   "createInvoiceScreenAddItem": "Add Item",
   "createInvoiceScreenCreateInvoiceButton": "Create Invoice",
-
   "comment_create_invoice_add_item_section": "==== Create Invoice Add Item Section ====",
   "createInvoiceAddItemItemName": "Item Name",
   "createInvoiceAddItemQuantity": "Quantity",
   "createInvoiceAddItemUnitPrice": "Unit Price",
   "createInvoiceAddItemSubTotal": "Sub Total",
-
   "comment_create_invoice_information_section": "==== Create Invoice Information Section ====",
   "createInvoiceInformationTitle": "Invoice Information",
   "createInvoiceInformationInvoiceTo": "Invoice To",
@@ -362,7 +319,6 @@
   "createInvoiceInformationWalletsNotFound": "Wallets Not Found",
   "createInvoiceInformationSelectStatusTitle": "Select Status",
   "createInvoiceInformationStatusNotFound": "Status Not Found",
-
   "comment_invoice_details_screen": "==== Invoice Details Screen ====",
   "invoiceDetailsTitle": "Invoice",
   "invoiceDetailsRefNumber": "Ref: #{number}",
@@ -379,7 +335,6 @@
   "invoiceDetailsSubTotal": "Sub Total",
   "invoiceDetailsPayNowButton": "Pay Now",
   "invoiceDetailsPrintInvoiceButton": "Print Invoice",
-
   "comment_invoice_pdf": "==== Invoice PDF Generator ====",
   "invoicePdfRefNumber": "Ref: #{number}",
   "invoicePdfIssuedDate": "Issued: {date}",
@@ -394,19 +349,16 @@
   "invoicePdfChargeLabel": "Charge: ",
   "invoicePdfTotalAmountLabel": "Total Amount: ",
   "invoicePdfThanksMessage": "Thanks for the purchase.",
-
   "comment_update_invoice_screen": "==== Update Invoice Screen ====",
   "updateInvoiceTitle": "Update Invoice",
   "updateInvoiceInvoiceItems": "Invoice Items",
   "updateInvoiceAddItem": "Add Item",
   "updateInvoiceUpdateInvoiceButton": "Update Invoice",
-
   "comment_update_invoice_add_item_section": "==== Update Invoice Add Item Section ====",
   "updateInvoiceAddItemItemName": "Item Name",
   "updateInvoiceAddItemQuantity": "Quantity",
   "updateInvoiceAddItemUnitPrice": "Unit Price",
   "updateInvoiceAddItemSubTotal": "Sub Total",
-
   "comment_update_invoice_information_section": "==== Update Invoice Information Section ====",
   "updateInvoiceInformationTitle": "Invoice Information",
   "updateInvoiceInformationInvoiceTo": "Invoice To",
@@ -422,7 +374,6 @@
   "updateInvoiceInformationStatusNotFound": "Status Not Found",
   "updateInvoiceInformationSelectPaymentStatusTitle": "Select Payment Status",
   "updateInvoiceInformationPaymentStatusNotFound": "Payment status not found",
-
   "comment_invoice_screen": "==== Invoice Screen ====",
   "invoiceScreenTitle": "Invoice",
   "invoiceScreenCreateInvoice": "Create Invoice",
@@ -430,11 +381,9 @@
   "invoiceScreenChargeLabel": "Charge:",
   "invoiceScreenStatusLabel": "Status: ",
   "invoiceScreenViewButton": "View",
-
   "comment_notification_screen": "==== Notification Screen ====",
   "notificationScreenTitle": "Notifications",
   "notificationScreenMarkAll": "Mark All",
-
   "comment_profile_screen": "==== Profile Screen ====",
   "profileScreenTitle": "Profile",
   "profileScreenProfileSettings": "Profile Settings",
@@ -444,7 +393,6 @@
   "profileScreenLogout": "Logout",
   "profileScreenBackButton": "Back",
   "profileScreenSelectLanguageTitle": "Select Language",
-
   "comment_profile_settings_screen": "==== Profile Settings Screen ====",
   "profileSettingsTitle": "Profile Settings",
   "profileSettingsFirstName": "First Name",
@@ -464,19 +412,16 @@
   "profileSettingsNoGenderFound": "No Gender Found",
   "profileSettingsSelectCountryTitle": "Select Country",
   "profileSettingsNoCountryFound": "No Country Found",
-
   "comment_qr_code_screen": "==== QR Code Screen ====",
   "qrCodeTitle": "My Qr Code",
   "qrCodeMerchantId": "MID: {accountNumber}",
   "qrCodeDownloadButton": "Download",
   "qrCodeDownloadSuccess": "Downloaded successfully!",
   "qrCodePermissionRequired": "Permission is required. Please allow it in settings.",
-
   "comment_add_new_ticket_controller": "==== Add New Ticket Controller Messages ====",
   "addNewTicketTitleRequired": "Please enter a title",
   "addNewTicketDescriptionRequired": "Please enter a description",
   "addNewTicketSuccessMessage": "Ticket created successfully",
-
   "comment_add_new_ticket_screen": "==== Add New Ticket Screen ====",
   "addNewTicketTitle": "Create Ticket",
   "addNewTicketTitleLabel": "Title",
@@ -484,7 +429,6 @@
   "addNewTicketAddAttach": "Add Attach",
   "addNewTicketAttachFile": "Attach File",
   "addNewTicketAddTicketButton": "Add Ticket",
-
   "comment_replay_ticket_screen": "==== Replay Ticket Screen ====",
   "replayTicketCloseButton": "Close",
   "replayTicketMessageRequired": "Please enter an message",
@@ -492,42 +436,34 @@
   "replayTicketUnknownFile": "Unknown file",
   "replayTicketTypeMessageHint": "Type your message",
   "replayTicketAttachmentPreviewTitle": "Attachment Preview",
-
   "comment_support_ticket_screen": "==== Support Ticket Screen ====",
   "supportTicketTitle": "Support Ticket",
   "supportTicketStatusOpen": "Open",
   "supportTicketStatusClosed": "Closed",
   "supportTicketViewButton": "View",
-
   "comment_transaction_filter_bottom_sheet": "==== Transaction Filter Bottom Sheet ====",
   "transactionFilterTransactionId": "Transaction ID",
   "transactionFilterStatus": "Status",
   "transactionFilterApplyButton": "Apply",
-
   "comment_transactions_screen": "==== Transactions Screen ====",
   "transactionsScreenTitle": "Transactions",
-
   "comment_two_fa_authentication_screen": "==== 2FA Authentication Screen ====",
   "twoFaAuthenticationTitle": "2FA Authentication",
-
   "comment_disable_two_fa_section": "==== Disable 2FA Section ====",
   "disableTwoFaTitle": "2FA Authentication",
   "disableTwoFaInstruction": "Enter your password to disable 2FA",
   "disableTwoFaPasswordRequired": "Please enter an password",
   "disableTwoFaButton": "Disable 2FA",
-
   "comment_enable_two_fa_section": "==== Enable 2FA Section ====",
   "enableTwoFaTitle": "2FA Authentication",
   "enableTwoFaInstruction": "Scan the QR code with Google Authenticator\nApp to enable 2FA",
   "enableTwoFaPinLabel": "The PIN From Google Authenticator App",
   "enableTwoFaPinRequired": "Please enter an google authentication pin",
   "enableTwoFaButton": "Enable 2FA",
-
   "comment_generate_qr_code_section": "==== Generate QR Code Section ====",
   "generateQrCodeTitle": "2FA Authentication",
   "generateQrCodeDescription": "Enhance your account security with two-factor authentication",
   "generateQrCodeButton": "Generate 2FA",
-
   "comment_create_new_wallet_screen": "==== Create New Wallet Screen ====",
   "createNewWalletTitle": "Create New Wallet",
   "createNewWalletSelectCurrency": "Select Currency",
@@ -535,12 +471,10 @@
   "createNewWalletCreateButton": "Create",
   "createNewWalletSelectCurrencyTitle": "Select Currency",
   "createNewWalletNoCurrencyFound": "No Currency Found",
-
   "comment_delete_wallet_bottom_sheet": "==== Delete Wallet Bottom Sheet ====",
   "deleteWalletTitle": "Are you sure?",
   "deleteWalletMessage": "Once you delete your data, you won't be able to revert this!",
   "deleteWalletConfirmButton": "Confirm",
-
   "comment_wallet_details_screen": "==== Wallet Details Screen ====",
   "walletDetailsTitle": "Wallet Details",
   "walletDetailsTotalBalance": "Total Balance",
@@ -548,25 +482,21 @@
   "walletDetailsHistory": "History",
   "walletDetailsSelectWalletTitle": "Select Wallet",
   "walletDetailsWalletNotFound": "Wallet not found",
-
   "comment_wallets_screen": "==== Wallets Screen ====",
   "walletsScreenTitle": "My Wallets",
   "walletsScreenWithdrawButton": "Withdraw",
   "walletsScreenDeleteButton": "Delete",
-
   "comment_create_withdraw_account_controller": "==== Create Withdraw Account Controller Messages ====",
   "createWithdrawAccountWalletRequired": "Please select a wallet",
   "createWithdrawAccountWithdrawMethodRequired": "Please select a withdraw method",
   "createWithdrawAccountMethodNameRequired": "Please enter an method name",
   "createWithdrawAccountFileRequired": "Please upload a file for {fieldName}",
   "createWithdrawAccountFieldRequired": "Please fill in the {fieldName} field",
-
   "comment_withdraw_controller": "==== Withdraw Controller Messages ====",
   "withdrawWithdrawAccountRequired": "Please select a withdraw account",
   "withdrawAmountRequired": "Please enter an amount",
   "withdrawMinAmountError": "Minimum amount should be {min} {currency}",
   "withdrawMaxAmountError": "Maximum amount should be {max} {currency}",
-
   "comment_create_withdraw_account_screen": "==== Create Withdraw Account Screen ====",
   "createWithdrawAccountScreenTitle": "Create Withdraw Account",
   "createWithdrawAccountScreenHeader": "Create Withdraw Account",
@@ -578,31 +508,25 @@
   "createWithdrawAccountScreenWalletNotFound": "Wallet not found",
   "createWithdrawAccountScreenSelectMethodTitle": "Select Method",
   "createWithdrawAccountScreenWithdrawMethodNotFound": "Withdraw method not found",
-
   "comment_edit_withdraw_account_screen": "==== Edit Withdraw Account Screen ====",
   "editWithdrawAccountScreenTitle": "Edit Withdraw Account",
   "editWithdrawAccountScreenHeader": "Edit Withdraw Account",
   "editWithdrawAccountScreenMethodNameLabel": "Method name",
   "editWithdrawAccountScreenUpdateButton": "Update",
-
   "comment_withdraw_screen": "==== Withdraw Screen ====",
   "withdrawScreenTitle": "Withdraw Money",
-
   "comment_delete_account_dropdown_section": "==== Delete Account Dropdown Section ====",
   "deleteAccountTitle": "Delete Withdraw account?",
   "deleteAccountWarningPart1": "This can't be undone. All data will be",
   "deleteAccountWarningPart2": " removed.",
   "deleteAccountDeleteButton": "Delete",
   "deleteAccountCancelButton": "Cancel",
-
   "comment_withdraw_account_filter_bottom_sheet": "==== Withdraw Account Filter Bottom Sheet ====",
   "withdrawAccountFilterAccountName": "Account Name",
   "withdrawAccountFilterSearchButton": "Search",
-
   "comment_withdraw_account_section": "==== Withdraw Account Section ====",
   "withdrawAccountSectionAllAccount": "All Account",
   "withdrawAccountSectionAddAccount": "Add Account",
-
   "comment_withdraw_amount_step_section": "==== Withdraw Amount Step Section ====",
   "withdrawAmountStepAccount": "Account",
   "withdrawAmountStepAmount": "Amount",
@@ -612,14 +536,12 @@
   "withdrawAmountStepWithdrawAccountNotFound": "Withdraw Account Not Found",
   "withdrawAmountStepSelectWalletTitle": "Select Wallet",
   "withdrawAmountStepWalletsNotFound": "Wallets Not Found",
-
   "comment_withdraw_review_step_section": "==== Withdraw Review Step Section ====",
   "withdrawReviewStepTitle": "Review Details",
   "withdrawReviewStepAmount": "Amount",
   "withdrawReviewStepCharge": "Charge",
   "withdrawReviewStepTotal": "Total",
   "withdrawReviewStepWithdrawNowButton": "Withdraw Now",
-
   "comment_withdraw_success_step_section": "==== Withdraw Success Step Section ====",
   "withdrawSuccessStepTitle": "Withdrawal Pending",
   "withdrawSuccessStepSubtitle": "Your funds have been pending\nwithdrawn.",
@@ -631,21 +553,129 @@
   "withdrawSuccessStepDateTime": "Date & Time",
   "withdrawSuccessStepBackHomeButton": "Back Home",
   "withdrawSuccessStepWithdrawAgainButton": "Withdraw Again",
-
   "comment_withdraw_toggle_section": "==== Withdraw Toggle Section ====",
   "withdrawToggleWithdraw": "Withdraw",
   "withdrawToggleWithdrawAccount": "Withdraw Account",
-
   "comment_dynamic_attachment_preview": "==== Dynamic Attachment Preview ====",
   "dynamicAttachmentPreviewTitle": "Attachment Preview",
-
   "comment_no_internet_connection_screen": "==== No Internet Connection Screen ====",
   "noInternetConnectionTitle": "No Internet Connection",
   "noInternetConnectionMessage": "Please check your network settings",
   "noInternetConnectionRetryButton": "Retry",
-
   "comment_web_view_screen": "==== Web View Screen ====",
   "webViewPaymentSuccess": "Payment Successful!",
   "webViewPaymentFailed": "Payment Failed!",
-  "webViewPaymentCancelled": "Payment was cancelled!"
+  "webViewPaymentCancelled": "Payment was cancelled!",
+  "kycDocumentsRequired": "Documents are required.",
+  "kycUploadFailed": "Upload failed. Please try again.",
+  "pickDocumentFailed": "Failed to pick document. Please try again.",
+  "kycFeatureCashout": "Cash-out",
+  "kycFeatureEpay": "ePay",
+  "kycFeatureExchange": "Exchange",
+  "kycFeatureGiftRedeem": "Gift redeeming",
+  "kycFeatureGiftSend": "Gift sending",
+  "kycFeatureInvoices": "Invoice payment",
+  "kycFeaturePayBill": "Bill payment",
+  "kycFeaturePayment": "Merchant payment",
+  "kycFeaturePaymentLinks": "Payment links",
+  "kycFeatureRemittance": "Remittance",
+  "kycFeatureRequestMoney": "Money requests",
+  "kycFeatureTransfer": "Transfer",
+  "kycFeatureTravel": "Travel booking",
+  "kycFeatureWithdraw": "Withdrawal",
+  "kycLimitsSectionTitle": "Transaction limits",
+  "kycRoadmapContinueForLevel": "Continue verification — level {level}",
+  "@kycRoadmapContinueForLevel": {
+    "placeholders": {
+      "level": {
+        "type": "int"
+      }
+    }
+  },
+  "kycRoadmapPending": "Your documents are under review. This usually takes 1–2 business days.",
+  "kycRoadmapRejectedAction": "Please resubmit your documents.",
+  "kycRoadmapRejectedTitle": "Your verification was rejected.",
+  "kycRoadmapStatusAvailable": "Ready to upgrade",
+  "kycRoadmapStatusCompleted": "Completed",
+  "kycRoadmapStatusCurrent": "Current",
+  "kycRoadmapStatusLocked": "Locked",
+  "kycRoadmapTitle": "Verification roadmap",
+  "kycSubmitWizardContinue": "Continue",
+  "kycSubmitWizardFileFormat": "Format: JPG, PNG, PDF — max 5MB",
+  "kycSubmitWizardInvalidLevel": "Invalid level",
+  "kycSubmitWizardNotUploaded": "Not uploaded",
+  "kycSubmitWizardRequiredDoc": "Required document",
+  "kycSubmitWizardReviewNote": "After submission your documents are reviewed by an admin. This usually takes 1–2 business days.",
+  "kycSubmitWizardReviewTitle": "Review & submit",
+  "kycSubmitWizardSubmit": "Submit documents",
+  "kycSubmitWizardTapToUpload": "Tap to upload",
+  "kycSubmitWizardTitleForLevel": "Verification — level {level}",
+  "@kycSubmitWizardTitleForLevel": {
+    "placeholders": {
+      "level": {
+        "type": "int"
+      }
+    }
+  },
+  "kycSubmitWizardUploaded": "Uploaded: {fileName}",
+  "@kycSubmitWizardUploaded": {
+    "placeholders": {
+      "fileName": {
+        "type": "String"
+      }
+    }
+  },
+  "kycUpgradeBodyForLevel": "To use this feature, your identity verification must reach level {level}.",
+  "@kycUpgradeBodyForLevel": {
+    "placeholders": {
+      "level": {
+        "type": "int"
+      }
+    }
+  },
+  "kycUpgradeBodyGeneric": "Your current verification level does not allow this action. Please complete or upgrade your identity verification.",
+  "kycUpgradeCurrentLevel": "Your level",
+  "kycUpgradeLater": "I'll do it later",
+  "kycUpgradeLevelChip": "Level {level}",
+  "@kycUpgradeLevelChip": {
+    "placeholders": {
+      "level": {
+        "type": "int"
+      }
+    }
+  },
+  "kycUpgradeRequiredLevel": "Required level",
+  "kycUpgradeRequiredTitle": "Verification upgrade required",
+  "kycUpgradeStartVerification": "Start verification",
+  "kycDocBusinessInfo": "Business information",
+  "kycDocBusinessInfoHint": "Complete business information including name, activity type and address.",
+  "kycDocCompanyDocs": "Company documents",
+  "kycDocCompanyDocsHint": "Company registration documents, articles of association and incorporation notice.",
+  "kycDocGenericHint": "Please upload the required document.",
+  "kycDocGovtId": "ID document",
+  "kycDocGovtIdHint": "A clear photo of the front and back of your ID document. All details must be readable.",
+  "kycDocNationalCard": "National ID card",
+  "kycDocNationalCardHint": "A clear photo of both sides of your national ID card. All details must be readable.",
+  "kycDocPersonalInfo": "Personal information",
+  "kycDocPersonalInfoHint": "Personal information including address, postal code and phone number.",
+  "kycDocSelfie": "Selfie",
+  "kycDocSelfieHint": "Take a clear selfie with good lighting and a fully visible face.",
+  "kycDocSourceOfFunds": "Proof of source of funds",
+  "kycDocSourceOfFundsHint": "A document proving the source of your funds (payslip, bank statement, business income…).",
+  "kycDocTradeLicense": "Trade license",
+  "kycDocTradeLicenseHint": "A scanned copy of a valid trade license.",
+  "kycDocVideoVerification": "Video verification",
+  "kycDocVideoVerificationHint": "Record a short video of your face following the on-screen instructions.",
+  "kycLimitGroupCashin": "Cash-in",
+  "kycLimitGroupCashout": "Cash-out",
+  "kycLimitGroupExchange": "Exchange",
+  "kycLimitGroupGift": "Gift",
+  "kycLimitGroupPayment": "Payment",
+  "kycLimitGroupTransfer": "Transfer",
+  "kycLimitMeasureDaily": "per day",
+  "kycLimitMeasureMax": "max",
+  "kycLimitMeasureMin": "min",
+  "kycLimitMeasureMonthly": "per month",
+  "kycLimitPaycardoTopup": "PayCardo top-up",
+  "kycCheckUnavailable": "Verification check is temporarily unavailable. Please try again shortly."
 }

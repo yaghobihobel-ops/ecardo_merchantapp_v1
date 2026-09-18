@@ -6,6 +6,7 @@ import 'package:qunzo_merchant/src/app/constants/assets_path/png_assets.dart';
 import 'package:qunzo_merchant/src/app/routes/routes.dart';
 import 'package:qunzo_merchant/src/common/widgets/common_loading.dart';
 import 'package:qunzo_merchant/src/presentation/screens/home/controller/home_controller.dart';
+import 'package:qunzo_merchant/src/presentation/screens/kyc_level/controller/kyc_level_controller.dart';
 
 class DrawerSection extends StatefulWidget {
   const DrawerSection({super.key});
@@ -122,6 +123,19 @@ class _DrawerSectionState extends State<DrawerSection> {
 
                               final nav = navigationLabel;
 
+                              // v1.0.3 (KYC): money features blocked by the
+                              // KYC policy land on the upgrade screen instead
+                              // of the feature screen. Server stays
+                              // authoritative — every call inside is still
+                              // guarded by the KYC error contract.
+                              bool kycBlocks(String feature) {
+                                if (!Get.isRegistered<KycLevelController>()) {
+                                  return false;
+                                }
+                                return !Get.find<KycLevelController>()
+                                    .hasFeature(feature);
+                              }
+
                               if (nav == localization.drawerDashboard) {
                                 Get.back();
                               } else if (nav ==
@@ -133,6 +147,13 @@ class _DrawerSectionState extends State<DrawerSection> {
                                   arguments: {"is_wallet_main_screen": false},
                                 );
                               } else if (nav == localization.drawerExchange) {
+                                if (kycBlocks('exchange')) {
+                                  Get.toNamed(
+                                    BaseRoute.upgradeRequired,
+                                    arguments: {'feature': 'exchange'},
+                                  );
+                                  return;
+                                }
                                 Get.toNamed(BaseRoute.exchange);
                               } else if (nav == localization.drawerQrCode) {
                                 Get.toNamed(BaseRoute.qrCode);
@@ -146,6 +167,13 @@ class _DrawerSectionState extends State<DrawerSection> {
                                   localization.drawerSupportTicket) {
                                 Get.toNamed(BaseRoute.supportTicket);
                               } else if (nav == localization.drawerWithdraw) {
+                                if (kycBlocks('withdraw')) {
+                                  Get.toNamed(
+                                    BaseRoute.upgradeRequired,
+                                    arguments: {'feature': 'withdraw'},
+                                  );
+                                  return;
+                                }
                                 Get.toNamed(BaseRoute.withdraw);
                               } else if (nav == localization.drawerInvoice) {
                                 Get.toNamed(BaseRoute.invoice);

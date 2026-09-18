@@ -38,6 +38,8 @@ import 'package:get/get.dart';
 import 'package:qunzo_merchant/src/common/services/app_update_controller.dart';
 import 'package:qunzo_merchant/src/common/services/local_notifications_service.dart';
 import 'package:qunzo_merchant/src/common/services/settings_service.dart';
+import 'package:qunzo_merchant/src/app/routes/routes.dart';
+import 'package:qunzo_merchant/src/presentation/screens/kyc_level/controller/kyc_level_controller.dart';
 
 /// The FCM topic this app instance subscribes to for app-update broadcasts.
 /// Override via the constructor when reusing this service in the merchant
@@ -153,6 +155,12 @@ class FirebaseMessagingService {
         data.toString(),
       );
     }
+
+    // v1.0.3 (KYC): a KYC review decision arrived — refresh the level
+    // status so the roadmap/badge reflect approval/rejection immediately.
+    if (type == 'kyc_action') {
+      _refreshKycState();
+    }
   }
 
   void _onMessageOpenedApp(RemoteMessage message) {
@@ -163,6 +171,24 @@ class FirebaseMessagingService {
     final type = message.data['type'];
     if (type == 'app_update') {
       _openUpdateScreen();
+    } else if (type == 'kyc_action') {
+      // Deep-link: tapping a KYC decision notification opens verification.
+      _refreshKycState();
+      if (Get.currentRoute != BaseRoute.idVerification) {
+        Get.toNamed(BaseRoute.idVerification);
+      }
+    }
+  }
+
+  /// v1.0.3 (KYC): pull the latest level status (event-driven refresh —
+  /// no polling timer) when the server pushes a KYC state change.
+  void _refreshKycState() {
+    try {
+      if (Get.isRegistered<KycLevelController>()) {
+        Get.find<KycLevelController>().fetchStatus();
+      }
+    } catch (e) {
+      if (kDebugMode) print('KYC status refresh failed: $e');
     }
   }
 

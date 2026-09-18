@@ -1832,4 +1832,258 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get webViewPaymentCancelled => 'Payment was cancelled!';
+
+  @override
+  String get kycDocumentsRequired => 'Documents are required.';
+
+  @override
+  String get kycUploadFailed => 'Upload failed. Please try again.';
+
+  @override
+  String get pickDocumentFailed => 'Failed to pick document. Please try again.';
+
+  @override
+  String get kycFeatureCashout => 'Cash-out';
+
+  @override
+  String get kycFeatureEpay => 'ePay';
+
+  @override
+  String get kycFeatureExchange => 'Exchange';
+
+  @override
+  String get kycFeatureGiftRedeem => 'Gift redeeming';
+
+  @override
+  String get kycFeatureGiftSend => 'Gift sending';
+
+  @override
+  String get kycFeatureInvoices => 'Invoice payment';
+
+  @override
+  String get kycFeaturePayBill => 'Bill payment';
+
+  @override
+  String get kycFeaturePayment => 'Merchant payment';
+
+  @override
+  String get kycFeaturePaymentLinks => 'Payment links';
+
+  @override
+  String get kycFeatureRemittance => 'Remittance';
+
+  @override
+  String get kycFeatureRequestMoney => 'Money requests';
+
+  @override
+  String get kycFeatureTransfer => 'Transfer';
+
+  @override
+  String get kycFeatureTravel => 'Travel booking';
+
+  @override
+  String get kycFeatureWithdraw => 'Withdrawal';
+
+  @override
+  String get kycLimitsSectionTitle => 'Transaction limits';
+
+  @override
+  String kycRoadmapContinueForLevel(int level) {
+    return 'Continue verification — level $level';
+  }
+
+  @override
+  String get kycRoadmapPending =>
+      'Your documents are under review. This usually takes 1–2 business days.';
+
+  @override
+  String get kycRoadmapRejectedAction => 'Please resubmit your documents.';
+
+  @override
+  String get kycRoadmapRejectedTitle => 'Your verification was rejected.';
+
+  @override
+  String get kycRoadmapStatusAvailable => 'Ready to upgrade';
+
+  @override
+  String get kycRoadmapStatusCompleted => 'Completed';
+
+  @override
+  String get kycRoadmapStatusCurrent => 'Current';
+
+  @override
+  String get kycRoadmapStatusLocked => 'Locked';
+
+  @override
+  String get kycRoadmapTitle => 'Verification roadmap';
+
+  @override
+  String get kycSubmitWizardContinue => 'Continue';
+
+  @override
+  String get kycSubmitWizardFileFormat => 'Format: JPG, PNG, PDF — max 5MB';
+
+  @override
+  String get kycSubmitWizardInvalidLevel => 'Invalid level';
+
+  @override
+  String get kycSubmitWizardNotUploaded => 'Not uploaded';
+
+  @override
+  String get kycSubmitWizardRequiredDoc => 'Required document';
+
+  @override
+  String get kycSubmitWizardReviewNote =>
+      'After submission your documents are reviewed by an admin. This usually takes 1–2 business days.';
+
+  @override
+  String get kycSubmitWizardReviewTitle => 'Review & submit';
+
+  @override
+  String get kycSubmitWizardSubmit => 'Submit documents';
+
+  @override
+  String get kycSubmitWizardTapToUpload => 'Tap to upload';
+
+  @override
+  String kycSubmitWizardTitleForLevel(int level) {
+    return 'Verification — level $level';
+  }
+
+  @override
+  String kycSubmitWizardUploaded(String fileName) {
+    return 'Uploaded: $fileName';
+  }
+
+  @override
+  String kycUpgradeBodyForLevel(int level) {
+    return 'To use this feature, your identity verification must reach level $level.';
+  }
+
+  @override
+  String get kycUpgradeBodyGeneric =>
+      'Your current verification level does not allow this action. Please complete or upgrade your identity verification.';
+
+  @override
+  String get kycUpgradeCurrentLevel => 'Your level';
+
+  @override
+  String get kycUpgradeLater => 'I\'ll do it later';
+
+  @override
+  String kycUpgradeLevelChip(int level) {
+    return 'Level $level';
+  }
+
+  @override
+  String get kycUpgradeRequiredLevel => 'Required level';
+
+  @override
+  String get kycUpgradeRequiredTitle => 'Verification upgrade required';
+
+  @override
+  String get kycUpgradeStartVerification => 'Start verification';
+
+  @override
+  String get kycDocBusinessInfo => 'Business information';
+
+  @override
+  String get kycDocBusinessInfoHint =>
+      'Complete business information including name, activity type and address.';
+
+  @override
+  String get kycDocCompanyDocs => 'Company documents';
+
+  @override
+  String get kycDocCompanyDocsHint =>
+      'Company registration documents, articles of association and incorporation notice.';
+
+  @override
+  String get kycDocGenericHint => 'Please upload the required document.';
+
+  @override
+  String get kycDocGovtId => 'ID document';
+
+  @override
+  String get kycDocGovtIdHint =>
+      'A clear photo of the front and back of your ID document. All details must be readable.';
+
+  @override
+  String get kycDocNationalCard => 'National ID card';
+
+  @override
+  String get kycDocNationalCardHint =>
+      'A clear photo of both sides of your national ID card. All details must be readable.';
+
+  @override
+  String get kycDocPersonalInfo => 'Personal information';
+
+  @override
+  String get kycDocPersonalInfoHint =>
+      'Personal information including address, postal code and phone number.';
+
+  @override
+  String get kycDocSelfie => 'Selfie';
+
+  @override
+  String get kycDocSelfieHint =>
+      'Take a clear selfie with good lighting and a fully visible face.';
+
+  @override
+  String get kycDocSourceOfFunds => 'Proof of source of funds';
+
+  @override
+  String get kycDocSourceOfFundsHint =>
+      'A document proving the source of your funds (payslip, bank statement, business income…).';
+
+  @override
+  String get kycDocTradeLicense => 'Trade license';
+
+  @override
+  String get kycDocTradeLicenseHint =>
+      'A scanned copy of a valid trade license.';
+
+  @override
+  String get kycDocVideoVerification => 'Video verification';
+
+  @override
+  String get kycDocVideoVerificationHint =>
+      'Record a short video of your face following the on-screen instructions.';
+
+  @override
+  String get kycLimitGroupCashin => 'Cash-in';
+
+  @override
+  String get kycLimitGroupCashout => 'Cash-out';
+
+  @override
+  String get kycLimitGroupExchange => 'Exchange';
+
+  @override
+  String get kycLimitGroupGift => 'Gift';
+
+  @override
+  String get kycLimitGroupPayment => 'Payment';
+
+  @override
+  String get kycLimitGroupTransfer => 'Transfer';
+
+  @override
+  String get kycLimitMeasureDaily => 'per day';
+
+  @override
+  String get kycLimitMeasureMax => 'max';
+
+  @override
+  String get kycLimitMeasureMin => 'min';
+
+  @override
+  String get kycLimitMeasureMonthly => 'per month';
+
+  @override
+  String get kycLimitPaycardoTopup => 'PayCardo top-up';
+
+  @override
+  String get kycCheckUnavailable =>
+      'Verification check is temporarily unavailable. Please try again shortly.';
 }
