@@ -136,13 +136,16 @@ class _KycSubmissionSectionState extends State<KycSubmissionSection> {
         }
 
         if (nextUnprocessedField != null) {
-          final result = await _navigateToFieldScreen(nextUnprocessedField);
+          // Copy to a final local — the mutable local loses null promotion
+          // across the async gap, so direct member access would not compile.
+          final target = nextUnprocessedField;
+          final result = await _navigateToFieldScreen(target);
 
           if (result != null) {
-            controller.fieldFiles[nextUnprocessedField.name ?? ""] = result;
+            controller.fieldFiles[target.name ?? ""] = result;
 
             controller.currentFieldIndex.value = controller.fields.indexOf(
-              nextUnprocessedField,
+              target,
             );
           }
         }
